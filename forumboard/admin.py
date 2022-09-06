@@ -35,3 +35,13 @@ class ForumPostAdmin(SummernoteModelAdmin):
     list_filter = ('created_on',)
     prepopulated_fields = {'slug': ('forum_board', 'post_title',)}
     summernote_fields = ('post_detail')
+
+
+@admin.register(Comment)
+class CommentAdmin(admin.ModelAdmin):
+    """
+    Display Comment section in Admin Console
+    """
+    list_display = ('post', 'creator', 'created_on')
+    search_fields = ('creator', 'body')
+    list_filter = ('created_on',)
