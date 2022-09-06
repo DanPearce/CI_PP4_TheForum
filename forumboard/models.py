@@ -17,7 +17,7 @@ class ForumBoard(models.Model):
     about = models.CharField(max_length=255)
     board_background = CloudinaryField('image', default='placeholder')
     followers = models.ManyToManyField(
-            User, related_name="board_followers", blank=True
+            User, related_name='board_followers', blank=True
     )
     approved_board = models.BooleanField(default=False)
 
@@ -25,7 +25,7 @@ class ForumBoard(models.Model):
         """
         This function returns the name of the ForumBoard
         """
-        return f"{self.name}"
+        return f'{self.name}'
 
     def number_of_followers(self):
         """
@@ -50,3 +50,21 @@ class ForumPost(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     likes = models.ManyToManyField(
         User, related_name='forumpost_like', blank=True)
+
+    class Meta:
+        """
+        Allows for ordering of the posts.
+        """
+        ordering = ['-created_on']
+
+    def __str__(self):
+        """
+        Returns the title of the post as a string.
+        """
+        return f'{self.post_title}'
+
+    def number_of_likes(self):
+        """
+        Returns the number of likes the post has recieved
+        """
+        return self.likes.count()
