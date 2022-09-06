@@ -32,3 +32,21 @@ class ForumBoard(models.Model):
         This function returns the number of followers that follow this board
         """
         return self.followers.count()
+
+
+class ForumPost(models.Model):
+    """
+    This class is used to define the paramaters for posting to a Forum Board.
+    """
+    forum_board = models.ForeignKey(
+        ForumBoard, on_delete=models.CASCADE, related_name='posts')
+    post_title = models.CharField(max_length=200, unique=True)
+    slug = models.SlugField(max_length=200, unique=True)
+    creator = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name='user_posts')
+    featured_image = CloudinaryField('image', default='placeholder')
+    post_detail = models.TextField()
+    excerpt = models.CharField(max_length=250, blank=True)
+    created_on = models.DateTimeField(auto_now_add=True)
+    likes = models.ManyToManyField(
+        User, related_name='forumpost_like', blank=True)
