@@ -49,7 +49,7 @@ class ForumPost(models.Model):
     excerpt = models.CharField(max_length=250, blank=True)
     created_on = models.DateTimeField(auto_now_add=True)
     likes = models.ManyToManyField(
-        User, related_name='forumpost_like', blank=True)
+        User, related_name='forumpost_likes', blank=True)
 
     class Meta:
         """
@@ -68,3 +68,18 @@ class ForumPost(models.Model):
         Returns the number of likes the post has recieved
         """
         return self.likes.count()
+
+
+class Comment(models.Model):
+    """
+    This class is used to define the parameters of comments.
+    """
+    post = models.ForeignKey(
+        ForumPost, on_delete=models.CASCADE, related_name='comments')
+    creator = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name='user_comments')
+    body = models.TextField()
+    created_on = models.DateTimeField(auto_now_add=True)
+    comment_likes = models.ManyToManyField(
+        User, related_name='comment_likes', blank=True
+    )
