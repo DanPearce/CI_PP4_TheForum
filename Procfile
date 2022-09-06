@@ -1,1 +1,1 @@
-web: gunicon theforum.wsgi
+web: gunicorn theforum.wsgi
