@@ -83,3 +83,21 @@ class Comment(models.Model):
     comment_likes = models.ManyToManyField(
         User, related_name='comment_likes', blank=True
     )
+
+    class Meta:
+        """
+        Allows for ordering of comments.
+        """
+        ordering = ['created_on']
+
+    def __str__(self):
+        """
+        Returns the content and creator of the comment.
+        """
+        return f"{self.body}, {self.creator}"
+
+    def number_of_comment_likes(self):
+        """
+        Returns the number of likes on a comment.
+        """
+        return f'{self.comment_likes}'
