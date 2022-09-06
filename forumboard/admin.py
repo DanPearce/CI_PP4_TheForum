@@ -1,3 +1,6 @@
+"""
+Admin set up for ForumBoard and it's posts/comments
+"""
 from django.contrib import admin
-
-# Register your models here.
+from django_summernote.admin import SummernoteModelAdmin
+from .models import ForumBoard, ForumPost, Comment
