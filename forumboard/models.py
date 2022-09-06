@@ -20,3 +20,15 @@ class ForumBoard(models.Model):
             User, related_name="board_followers", blank=True
     )
     approved_board = models.BooleanField(default=False)
+
+    def __str__(self):
+        """
+        This function returns the name of the ForumBoard
+        """
+        return f"{self.name}"
+
+    def number_of_followers(self):
+        """
+        This function returns the number of followers that follow this board
+        """
+        return self.followers.count()
