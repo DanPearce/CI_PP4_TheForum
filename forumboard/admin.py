@@ -23,3 +23,15 @@ class ForumBoardAdmin(SummernoteModelAdmin):
         Allows admins to approve Forum Boards for publishing
         """
         queryset.update(approved_board=True)
+
+
+@admin.register(ForumPost)
+class ForumPostAdmin(SummernoteModelAdmin):
+    """
+    Display Forum Post sections in Admin Console
+    """
+    list_display = ('forum_board', 'post_title', 'creator', 'created_on')
+    search_fields = ['post_title', 'post_detail']
+    list_filter = ('created_on',)
+    prepopulated_fields = {'slug': ('forum_board', 'post_title',)}
+    summernote_fields = ('post_detail')
