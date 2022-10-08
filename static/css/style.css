@@ -1,0 +1,15 @@
+/*Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&family=Overpass:wght@600;700&display=swap');
+
+/*Styling for all pages*/
+*, *::before, *, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Overpass', sans-serif;
+    background-color: #fefdfd;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
