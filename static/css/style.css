@@ -50,3 +50,66 @@ nav {
     color: rgba(254, 253, 253, 1);
 }
 
+.logo:hover .the {
+    animation: color-change-the 3s;
+}
+
+@keyframes color-change-the {
+    0% {
+        color: #cd0000;
+    }
+    50% {
+        color: #fefdfd;
+    }
+    100% {
+        color: #fefdfd;
+    }
+}
+
+.logo:hover .forum { 
+    animation: color-change-forum 3s;
+}
+
+@keyframes color-change-forum {
+    0% {
+        color: #fefdfd;
+    }
+    50% {
+        color: #cd0000;
+    }
+    100% {
+        color: #cd0000;
+    }
+}
+
+.logoHoverRemoved .the {
+    animation: color-remove-the 3s;
+}
+
+.logoHoverRemoved .forum {
+    animation: color-remove-forum 3s;
+}
+
+@keyframes color-remove-forum {
+    0% {
+        color: #cd0000;
+    }
+    50% {
+        color: #fefdfd;
+    }
+    100% {
+        color: #fefdfd;
+    }
+}
+
+@keyframes color-remove-the {
+    0% {
+        color: #fefdfd;
+    }
+    50% {
+        color: #cd0000;
+    }
+    100% {
+        color: #cd0000;
+    }
+}
