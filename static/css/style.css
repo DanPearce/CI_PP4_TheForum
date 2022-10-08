@@ -152,3 +152,70 @@ a:hover {
     font-size: 15px;
     color: #fefdfd;
 }
+
+/*All Auth Styling*/
+.auth {
+    margin-top: 5vh;
+    text-align: center;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+}
+
+.auth a {
+    color: #cd0000;
+}
+
+.auth a:hover {
+    color: #181818;
+}
+
+.auth-form {
+    text-align: left;
+    margin-bottom: 1rem;
+    width: auto;
+}
+
+.auth-form input {
+    float: right;
+    clear: both;
+    background-color: #fefdfd;
+    border-radius: 5px;
+    border: none;
+}
+
+.auth-form button {
+    background-color: #cd0000;
+    color: #fefdfd;
+    border-radius: 5px;
+    border: none;
+}
+
+.auth-form button:hover {
+    color: #181818;
+}
+
+.center-button {
+    text-align: center;
+}
+
+/*Auth Login*/
+
+label[for=id_remember] {
+    float: right;
+}
+
+/*Auth Password Reset*/
+.input-group {
+    text-align: center;
+}
+
+#resetpw-btn {
+    background-color: #cd0000;
+    color: #fefdfd;
+    border-radius: 5px;
+    width: auto;
+}
+
+#resetpw-btn:hover {
+    color: #181818;
+}
