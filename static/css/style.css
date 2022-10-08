@@ -14,7 +14,7 @@ body {
     flex-direction: column;
 }
 
-/*base.html Styling*/
+/*BASE.HTML STYLING*/
 /*Logo & Navbar*/
 nav {
     background-color: #181818;
@@ -112,4 +112,9 @@ nav {
     100% {
         color: #cd0000;
     }
+}
+
+/*Main Section*/
+#main {
+    height: auto;
 }
