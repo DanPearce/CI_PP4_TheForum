@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <title>theforum | Home</title>
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
     <header>
         <!--Logo & Navbar with collapsible functionality-->
         <nav class="navbar navbar-expand-lg navbar-dark">
@@ -47,6 +47,21 @@
     <!--Block Content from additional templates lives here-->
     {% endblock content %}
     </main>
+    <footer class="footer mt-auto">
+        <ul class="socials text-center m-0">
+            <li>
+                <a href="https://www.instagram.com/danpearcedev/" target="_blank" rel="noopener" aria-label="Visit the developer's Instagram page(Opens in a new tab)"><i class="fa-brands fa-instagram"></i></a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/danielapearce/" target="_blank" rel="noopener" aria-label="Visit the developer's Linkedin page(Opens in a new tab)"><i class="fa-brands fa-linkedin-in"></i></a>
+            </li>
+            <li>
+                <a href="https://github.com/DanPearce/CI_PP4_TheForum" target="_blank" rel="noopener" aria-label="View the code on the developer's GitHub page(Opens in a new tab)"><i class="fa-brands fa-github"></i></a>
+            </li>
+        </ul>
+        <p class="footerSignature">COPYRIGHT &copy; DAN PEARCE 2022</p>
+        <p class="footerSignature">Website developed by Dan Pearce<br><a href="https://danpearce.software/" target="_blank" rel="noopener" aria-label="Visit the website designer's page, Dan Pearce (opens in a new tab)">danpearce.software</a></p>
+    </footer>
 </body>
 <!--JavaScript, jQuery & Bootstrap-->
 <!--Bootstrap-->
