@@ -19,7 +19,7 @@
         <!--Logo & Navbar with collapsible functionality-->
         <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#"><span class="logo"><strong><span class="the">the</span><span class="forum">forum</span></strong></span></a>
+                <a class="navbar-brand" href="{% url 'home' %}"><span class="logo"><strong><span class="the">the</span><span class="forum">forum</span></strong></span></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
@@ -27,14 +27,14 @@
                     <ul class="navbar-nav justify-content-end ms-auto">
                         {% if user.is_authenticated %}
                         <li class="nav-item">
-                        <a class="nav-link" href="#">Logout</a>
+                        <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
                         </li>
                         {% else %}
                         <li class="nav-item">
-                        <a class="nav-link" href="#">Login</a>
+                        <a class="nav-link" href="{% url 'account_login' %}">Login</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="#">Sign Up</a>
+                        <a class="nav-link" href="{% url 'account_signup' %}">Sign Up</a>
                         </li>
                         {% endif %}
                         <li class="nav-item">
