@@ -2,20 +2,22 @@
 {% block content %}
 <div id="section" class="row">
     <div class="col-12">
+        {% if not user.is_authenticated %}
         <div class="jumbotron text-center">
             <h1 class="display-4">Welcome to theforum</h1>
             <p class="lead">Start the conversation today.</p>                    
             <p>Join the community and start sharing your thoughts.</p>
-            <a class="btn btn-dark btn-lg" href="#" role="button">Sign Up</a>
+            <a class="btn btn-dark btn-lg sign-up-btn" href="{% url 'account_signup' %}" role="button">Sign Up</a>
         </div>
+        {% endif %}
         <div class="row container-fluid news">
             <h6>Trending News</h6>
             <hr class="my-4">
             {% for article in articles %}
                 {% if forloop.counter < 5 %}
                     <div class="col-sm-3 top-stories text-wrap">
-                        <img src="{{ article.urlToImage }}">
-                        <a href="{{ article.url }}" target="_blank" class="text-wrap">{{ article.title }}</a>
+                        <img src="{{ article.urlToImage }}" alt="This image relates to {{ article.title }}">
+                        <a href="{{ article.url }}" target="_blank" class="text-wrap" aria-label="Visit the news article site, releated to latest headline {{ article.title }}">{{ article.title }}</a>
                         </a>
                     </div>
                 {% endif %}
