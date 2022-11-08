@@ -1,4 +1,26 @@
 {% extends 'base.html' %}
 {% block content %}
-
+<div id="section" class="row">
+    <div class="col-12">
+        <div class="jumbotron text-center">
+            <h1 class="display-4">Welcome to theforum</h1>
+            <p class="lead">Start the conversation today.</p>                    
+            <p>Join the community and start sharing your thoughts.</p>
+            <a class="btn btn-dark btn-lg" href="#" role="button">Sign Up</a>
+        </div>
+        <div class="row container-fluid news">
+            <h6>Trending News</h6>
+            <hr class="my-4">
+            {% for article in articles %}
+                {% if forloop.counter < 5 %}
+                    <div class="col-sm-3 top-stories text-wrap">
+                        <img src="{{ article.urlToImage }}">
+                        <a href="{{ article.url }}" target="_blank" class="text-wrap">{{ article.title }}</a>
+                        </a>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
 {% endblock %}

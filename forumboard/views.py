@@ -22,7 +22,7 @@ if os.path.isfile('env.py'):
 
 def get_topstories(request):
     """
-    Testing
+    View to get the latest UK top headlines, using NewsAPI.org
     """
     API_KEY = os.environ.get('API_KEY')
     url = f'https://newsapi.org/v2/top-headlines?country=gb&apiKey={API_KEY}'
