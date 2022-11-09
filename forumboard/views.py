@@ -3,14 +3,15 @@ Views for ForumBoard
 """
 import os
 import requests
+from .models import ForumBoard, ForumPost, Comment
 from django.shortcuts import render
-from django.views import generic
+from django.views import generic, View
 if os.path.isfile('env.py'):
     import env
-from .models import ForumBoard, ForumPost, Comment
 
 
-def get_topstories(request):
+
+def get_index(request):
     """
     View to get the latest UK top headlines, using NewsAPI.org
     """
@@ -19,18 +20,10 @@ def get_topstories(request):
     response = requests.get(url)
     data = response.json()
     articles = data['articles']
+    latest_posts = ForumPost.objects.order_by('likes')
     context = {
-        'articles': articles
+        'articles': articles,
+        'latest_posts': latest_posts
     }
 
     return render(request, 'index.html', context)
-
-
-class IndexPostView(generic.ListView):
-    """
-    View to generate posts based on likes.
-    """
-    model = ForumPost
-    template_name = 'index_post_view.html'
-    queryset = ForumPost.objects.order_by('likes')
-    paginate_by = 10

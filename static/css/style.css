@@ -116,6 +116,7 @@ nav {
 #main {
     height: auto;
     max-width: 1000px;
+    margin-top: 10px;
 }
 
 /*Footer*/
@@ -235,6 +236,13 @@ label[for=id_remember] {
 
 .my-4 {
     margin-top: 0 !important;
+    margin-bottom: 10px !important;
+    border-top: 2px solid #181818;
+    opacity: 1;
+}
+
+h6 {
+    padding-left: 0 !important;
 }
 
 /*Top Stories*/
@@ -274,4 +282,9 @@ label[for=id_remember] {
     color: #fefdfd;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
+}
+
+/* Latest Posts */
+.top_posts {
+    margin-top: 10px;
 }
