@@ -21,7 +21,7 @@ def get_index(request):
     response = requests.get(url)
     data = response.json()
     articles = data['articles']
-    latest_posts = ForumPost.objects.order_by('likes')
+    latest_posts = ForumPost.objects.order_by('-created_on')
     context = {
         'articles': articles,
         'latest_posts': latest_posts
