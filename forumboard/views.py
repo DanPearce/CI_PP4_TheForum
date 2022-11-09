@@ -22,9 +22,11 @@ def get_index(request):
     data = response.json()
     articles = data['articles']
     latest_posts = ForumPost.objects.order_by('-created_on')
+    top_boards = ForumBoard.objects.order_by('followers')
     context = {
         'articles': articles,
-        'latest_posts': latest_posts
+        'latest_posts': latest_posts,
+        'top_boards': top_boards,
     }
 
     return render(request, 'index.html', context)
