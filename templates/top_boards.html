@@ -1,1 +1,20 @@
-Hello, World!
+<h6>Top Boards</h6>
+<a>View All</a>
+<hr class="my-4">
+{% for board in top_boards %}
+    {% if board.approved_board %}
+    <div class="index-forum-board row">
+        <div class="col-12">
+            <div class="board_name">
+                {{ board.name }}
+            </div>
+            <div class="board_about">
+                {{ board.about }}
+            </div>
+            <div class="board_followers">
+                {{ board.followers.count }}
+            </div>
+        </div>
+    </div>
+    {% endif %}
+{% endfor %}

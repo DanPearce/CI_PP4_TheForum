@@ -22,7 +22,7 @@ def get_index(request):
     data = response.json()
     articles = data['articles']
     latest_posts = ForumPost.objects.order_by('-created_on')
-    top_boards = ForumBoard.objects.order_by('followers')
+    top_boards = ForumBoard.objects.order_by('-created_on')
     context = {
         'articles': articles,
         'latest_posts': latest_posts,
