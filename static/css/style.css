@@ -12,7 +12,10 @@ body {
     width: 100%;
 }
 
-/*BASE.HTML STYLING*/
+/*---------------
+'base.html' STYLING
+---------------*/
+
 /*Logo & Navbar*/
 nav {
     background-color: #181818;
@@ -152,7 +155,9 @@ a:hover {
     color: #fefdfd;
 }
 
-/*All Auth Styling*/
+/*
+All Authorisation Pages STYLING
+*/
 .auth {
     margin-top: 5vh;
     text-align: center;
@@ -219,7 +224,9 @@ label[for=id_remember] {
     color: #181818;
 }
 
-/*INDEX.HTML*/
+/*---------------
+'index.html' STYLING
+---------------*/
 
 .display-4 {
     margin-top: 10px;
@@ -252,6 +259,7 @@ h6 {
     justify-content: center;
     margin-top: 10px;
     padding-right: 0;
+    position: relative;
 }
 
 .top-stories {
@@ -271,23 +279,30 @@ h6 {
 }
 
 .top-stories a {
+    display: flex;
     position: absolute;
-    text-align: center;
     text-decoration: none;
-    font-size: xx-small;
-    max-width: 100%;
-    max-height: 100%;
+    font-size: small;
+    height: 100%;
     bottom: 0;
-    left: 0;
     background-color: rgba(24, 24, 24, 0.5);
     color: #fefdfd;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 }
 
+.article-title {
+    margin-top: auto;
+}
+
 /* Latest Posts */
-.top_posts {
+.latest-posts {
     margin-top: 10px;
+}
+
+.latest-posts a {
+    text-decoration: none;
+    color: #181818;
 }
 
 .likes-col {
@@ -306,6 +321,11 @@ h6 {
     border-radius: 5px;
     border: 1px solid #fefdfd;
     background-color: #f2f2f2;
+    border: 1px solid transparent;
+}
+
+.index-forum-post:hover {
+    border: rgba(24, 24, 24, 0.5) solid 1px;
 }
 
 .user-likes {
@@ -332,7 +352,7 @@ h6 {
 }
 
 /*Top Boards*/
-.top_boards {
+.top-boards {
     margin-top: 10px;
     padding: 0;
     width: 100%;
@@ -351,16 +371,23 @@ h6 {
 }
 
 .index-forum-board {
+    box-sizing: border-box;
     background-color: #f2f2f2;
     text-align: center;
     margin-top: 10px;
+    margin-bottom: 10px;
     margin-left: 0px;
     width: auto;
     align-items: center;
-
+    border-radius: 5px;
+    border: 1px solid transparent;
 }
 
-.board_name {
+.index-forum-board:hover {
+    border: rgba(24, 24, 24, 0.5) solid 1px;
+}
+
+.board-name {
     color:#cd0000;
     font-size: large;
 }

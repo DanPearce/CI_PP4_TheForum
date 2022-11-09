@@ -1,4 +1,4 @@
-<div class="row container-fluid top_boards">
+<div class="row container-fluid top-boards">
     <div class="top-boards-title">
         <h6>Top Boards</h6>
         <a href="#">View All</a>
@@ -8,13 +8,13 @@
         {% if board.approved_board %}
         <div class="index-forum-board row">
             <div class="col-12">
-                <div class="board_name">
+                <div class="board-name">
                     {{ board.name }}
                 </div>
-                <div class="board_about">
+                <div class="board-about">
                     {{ board.about }}
                 </div>
-                <div class="board_followers">
+                <div class="board-followers">
                     <i class="fa-solid fa-user-check"></i>
                     {{ board.followers.count }}
                 </div>
