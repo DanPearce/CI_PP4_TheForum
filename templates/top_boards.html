@@ -6,20 +6,22 @@
     <hr class="my-4">
     {% for board in top_boards %}
         {% if board.approved_board %}
-        <div class="index-forum-board row">
-            <div class="col-12">
-                <div class="board-name">
-                    {{ board.name }}
-                </div>
-                <div class="board-about">
-                    {{ board.about }}
-                </div>
-                <div class="board-followers">
-                    <i class="fa-solid fa-user-check"></i>
-                    {{ board.followers.count }}
+        <a href="{% url 'board_detail' board.slug  %}">
+            <div class="index-forum-board row">
+                <div class="col-12">
+                    <div class="board-name">
+                        {{ board.name }}
+                    </div>
+                    <div class="board-about">
+                        {{ board.about }}
+                    </div>
+                    <div class="board-followers">
+                        <i class="fa-solid fa-user-check"></i>
+                        {{ board.followers.count }}
+                    </div>
                 </div>
             </div>
-        </div>
+        </a>
         {% endif %}
     {% endfor %}
 </div>

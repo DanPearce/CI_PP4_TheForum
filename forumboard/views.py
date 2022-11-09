@@ -15,7 +15,8 @@ if os.path.isfile('env.py'):
 def get_index(request):
     """
     View to get the latest UK top headlines, using NewsAPI.org,
-    Load trending posts on the website,
+    Load the latest posts on the website,
+    Load the boards on the website.
     """
     API_KEY = os.environ.get('API_KEY')
     url = f'https://newsapi.org/v2/top-headlines?country=gb&apiKey={API_KEY}'
@@ -35,15 +36,15 @@ def get_index(request):
 
 class PostDetail(View):
     """
-    Testing
+    View to generate items related to posts
     """
     def get(self, request, slug, *args, **kwargs):
         """
-        Testing
+        Function to generate a view to get the data from a post
         """
         queryset = ForumPost.objects
         post = get_object_or_404(queryset, slug=slug)
-        comments = post.comments.order_by("-created_on")
+        comments = post.comments.order_by('-created_on')
         board = ForumPost.forum_board
         liked = False
         if post.likes.filter(id=self.request.user.id).exists():
@@ -57,3 +58,26 @@ class PostDetail(View):
         }
 
         return render(request, 'post_detail.html', context)
+
+
+class BoardDetail(View):
+    """
+    Testing
+    """
+    def get(self, request, slug, *args, **kwargs):
+        """
+        Testing
+        """
+        queryset = ForumBoard.objects
+        board = get_object_or_404(queryset, slug=slug)
+        posts = board.posts.order_by('-created_on')
+        following = False
+        if board.followers.filter(id=self.request.user.id).exists():
+            following = True
+        context = {
+            'board': board,
+            'posts': posts,
+            'following': following
+        }
+
+        return render(request, 'board_detail.html', context)
