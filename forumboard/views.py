@@ -13,7 +13,8 @@ if os.path.isfile('env.py'):
 
 def get_index(request):
     """
-    View to get the latest UK top headlines, using NewsAPI.org
+    View to get the latest UK top headlines, using NewsAPI.org,
+    Load trending posts on the website,
     """
     API_KEY = os.environ.get('API_KEY')
     url = f'https://newsapi.org/v2/top-headlines?country=gb&apiKey={API_KEY}'
