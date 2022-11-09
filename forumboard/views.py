@@ -3,12 +3,13 @@ Views for ForumBoard
 """
 import os
 import requests
+from django.shortcuts import render, get_object_or_404
+from django.views import View
 from .models import ForumBoard, ForumPost, Comment
-from django.shortcuts import render
-from django.views import generic, View
+
+
 if os.path.isfile('env.py'):
     import env
-
 
 
 def get_index(request):
@@ -30,3 +31,29 @@ def get_index(request):
     }
 
     return render(request, 'index.html', context)
+
+
+class PostDetail(View):
+    """
+    Testing
+    """
+    def get(self, request, slug, *args, **kwargs):
+        """
+        Testing
+        """
+        queryset = ForumPost.objects
+        post = get_object_or_404(queryset, slug=slug)
+        comments = post.comments.order_by("-created_on")
+        board = ForumPost.forum_board
+        liked = False
+        if post.likes.filter(id=self.request.user.id).exists():
+            liked = True
+        context = {
+            'post': post,
+            'comments': comments,
+            'liked': liked,
+            'comment_form': Comment(),
+            'board': board
+        }
+
+        return render(request, 'post_detail.html', context)

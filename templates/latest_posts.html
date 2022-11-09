@@ -16,12 +16,14 @@
                     <span class="post-like-count">{{ post.likes.count }}</span>
                 </div>
             </div>
-            <div class="post-title">
-                {{ post.post_title }}
-            </div>
-            <div class="index-img-container">
-                <span><img class="index-forum-post-img" src="{{ post.featured_image.url }}"></span>
-            </div>
+            <a href="{% url 'post_detail' post.slug  %}">
+                <div class="post-title">
+                    {{ post.post_title }}
+                </div>
+                <div class="index-img-container">
+                    <span><img class="index-forum-post-img" src="{{ post.featured_image.url }}"></span>
+                </div>
+            </a>
         </div>
     </div>
     {% endfor %}
