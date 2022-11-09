@@ -251,6 +251,7 @@ h6 {
     display: flex;
     justify-content: center;
     margin-top: 10px;
+    padding-right: 0;
 }
 
 .top-stories {
@@ -328,4 +329,42 @@ h6 {
 
 .index-forumboard-post{
     font-size: 12px;
+}
+
+/*Top Boards*/
+.top_boards {
+    margin-top: 10px;
+    padding: 0;
+    width: 100%;
+}
+
+.top-boards-title {
+    display: inline-flex;
+    justify-content: space-between;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.top-boards-title a {
+    color: #cd0000;
+    text-decoration: underline;
+}
+
+.index-forum-board {
+    background-color: #f2f2f2;
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 0px;
+    width: auto;
+    align-items: center;
+
+}
+
+.board_name {
+    color:#cd0000;
+    font-size: large;
+}
+
+.zero-right-padding {
+    padding-right: 0;
 }
