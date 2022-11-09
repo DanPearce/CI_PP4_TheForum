@@ -358,16 +358,25 @@ h6 {
     width: 100%;
 }
 
+.view_all_boards {
+    color: #cd0000 !important;
+    text-decoration: underline !important;
+}
+
+.view_all_boards:hover {
+    color: #181818 !important;
+}
+
+.top-boards a {
+    text-decoration: none;
+    color: #181818;
+}
+
 .top-boards-title {
     display: inline-flex;
     justify-content: space-between;
     padding-left: 0;
     padding-right: 0;
-}
-
-.top-boards-title a {
-    color: #cd0000;
-    text-decoration: underline;
 }
 
 .index-forum-board {

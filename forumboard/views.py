@@ -18,8 +18,8 @@ def get_index(request):
     Load the latest posts on the website,
     Load the boards on the website.
     """
-    API_KEY = os.environ.get('API_KEY')
-    url = f'https://newsapi.org/v2/top-headlines?country=gb&apiKey={API_KEY}'
+    api_key = os.environ.get('API_KEY')
+    url = f'https://newsapi.org/v2/top-headlines?country=gb&apiKey={api_key}'
     response = requests.get(url)
     data = response.json()
     articles = data['articles']
