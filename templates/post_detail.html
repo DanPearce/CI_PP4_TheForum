@@ -27,11 +27,13 @@
     <div class="col-12">
         {% if user.is_authenticated %}
         <h5>Share your thoughts:</h5>
+        <div class="comment-form">
         <form method="post" id="comment-form">
             {{ comment_form | crispy }}
             {% csrf_token %}
-            <button type="submit" class="btn btn-dark btn-lg sign-up-btn comment-btn">Comment</button>
+            <button type="submit" class="btn btn-dark btn-sm sign-up-btn comment-btn">Comment</button>
         </form>
+        </div>
         {% endif %}
     </div>
 </section>

@@ -445,7 +445,6 @@ h6 {
 */
 #post-detail {
     margin: 10px auto;
-    justify-content: center;
     width: 95%;
     background-color: #f2f2f2;
     border-radius: 5px;
@@ -479,4 +478,30 @@ h6 {
     margin: 10px;
     text-align: right;
     font-size: small;
+}
+
+/* Comment Section */
+label {
+    display: none;
+}
+
+.comment-form {
+    margin: 10px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+#div_id_body {
+    width: max-content;
+    height: 125px;
+    overflow: scroll;
+    border: #181818 solid 1px;
+    border-radius: 7px;
+}
+
+.comment-btn {
+    float: right;
+    margin-top: 10px;
+    justify-content: right;
 }
