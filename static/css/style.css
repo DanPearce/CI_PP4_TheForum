@@ -257,7 +257,7 @@ h6 {
 .news {
     display: flex;
     justify-content: center;
-    margin-top: 10px;
+    margin-top: 20px;
     padding-right: 0;
     position: relative;
 }
@@ -403,4 +403,39 @@ h6 {
 
 .zero-right-padding {
     padding-right: 0;
+}
+
+/*
+'board_header.html' STYLING
+*/
+#board-header {
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    background-color: #181818;
+    color: #fefdfd; 
+}
+
+.board-header-img-div {
+    padding: 0; 
+}
+
+.board-header-img {
+    width: 100%;
+    height: 25vh;
+    object-fit: cover;
+}
+
+.name-about-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.forum-board-name {
+    margin-top: 0.5rem;
+}
+
+.forum-board-about {
+    margin: auto 0;
 }
