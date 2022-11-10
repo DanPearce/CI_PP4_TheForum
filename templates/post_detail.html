@@ -3,4 +3,25 @@
 <section id="board-header" class="row">
     {% include 'board_header.html' %}
 </section>
+<section id="post-detail" class="row">
+    <div class="col-12">
+        <div class="post-detail-title-likes">
+            <span class="post-detail-title"><h4>{{ post.post_title }}</h4></span>
+            <span class="post-detail-likes">
+                <i class="fa-regular fa-heart"></i>
+                {{ post.likes.count }}
+            </span>
+        </div>
+        <div class="post-detail-image-container">
+            <img class="post-detail-image" src="{{ post.featured_image.url }}" alt="Image relating to {{ post.pos_title }}">
+        </div>
+        <div class="post-detail-content">
+            {{ post.post_detail }}
+        </div>
+        <div class="post-detail-created-creator">
+            Posted on {{ post.created_on }}
+            by {{ post.creator }}
+        </div>
+    </div>
+</section>
 {% endblock %}

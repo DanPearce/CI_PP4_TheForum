@@ -439,3 +439,44 @@ h6 {
 .forum-board-about {
     margin: auto 0;
 }
+
+/*
+'post_detail.html' STYLING
+*/
+#post-detail {
+    margin: 10px auto;
+    justify-content: center;
+    width: 95%;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+}
+
+.post-detail-title-likes {
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.post-detail-likes {
+    font-size: large;
+}
+
+.post-detail-image {
+    margin: 10px;
+    width: 98%;
+}
+
+.post-detail-image-container {
+    text-align: center;
+}
+
+.post-detail-content {
+    margin: 10px;
+    font-size: large;
+}
+
+.post-detail-created-creator {
+    margin: 10px;
+    text-align: right;
+    font-size: small;
+}
