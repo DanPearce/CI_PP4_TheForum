@@ -60,6 +60,39 @@ class PostDetail(View):
 
         return render(request, 'post_detail.html', context)
 
+    def post(self, request, slug, *args, **kwargs):
+        """
+        Function to post a comment to a post
+        """
+        queryset = ForumPost.objects
+        post = get_object_or_404(queryset, slug=slug)
+        comments = post.comments.order_by('-created_on')
+        board = post.forum_board
+        liked = False
+        if post.likes.filter(id=self.request.user.id).exists():
+            liked = True
+        
+        comment_form = CommentForm(data=request.POST)
+        if comment_form.is_valid():
+            comment_form.instance.name = request.user.username
+            comment = comment_form.save(commit=False)
+            comment.post = post
+            comment.creator_id = request.user.id
+            comment.save()
+            comment_form = CommentForm
+        else:
+            comment_form = CommentForm
+
+        context = {
+            'post': post,
+            'comments': comments,
+            'liked': liked,
+            'comment_form': comment_form,
+            'board': board
+        }
+
+        return render(request, 'post_detail.html', context)
+
 
 class BoardDetail(View):
     """
