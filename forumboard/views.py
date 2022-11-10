@@ -6,6 +6,7 @@ import requests
 from django.shortcuts import render, get_object_or_404
 from django.views import View
 from .models import ForumBoard, ForumPost, Comment
+from .forms import CommentForm
 
 
 if os.path.isfile('env.py'):
@@ -53,7 +54,7 @@ class PostDetail(View):
             'post': post,
             'comments': comments,
             'liked': liked,
-            'comment_form': Comment(),
+            'comment_form': CommentForm(),
             'board': board
         }
 
@@ -62,11 +63,11 @@ class PostDetail(View):
 
 class BoardDetail(View):
     """
-    Testing
+    View to grab the necessary details for the Forum Board
     """
     def get(self, request, slug, *args, **kwargs):
         """
-        Testing
+        Function to generate a view to get the data from a forum board
         """
         queryset = ForumBoard.objects
         board = get_object_or_404(queryset, slug=slug)
