@@ -45,7 +45,7 @@ class PostDetail(View):
         queryset = ForumPost.objects
         post = get_object_or_404(queryset, slug=slug)
         comments = post.comments.order_by('-created_on')
-        board = ForumPost.forum_board
+        board = post.forum_board
         liked = False
         if post.likes.filter(id=self.request.user.id).exists():
             liked = True
