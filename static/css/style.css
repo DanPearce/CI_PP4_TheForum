@@ -481,7 +481,11 @@ h6 {
 }
 
 /* Comment Section */
-label {
+.post-comment {
+    padding: 0;
+}
+
+#comment-form label {
     display: none;
 }
 
