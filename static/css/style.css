@@ -368,6 +368,14 @@ h6 {
     color: #181818 !important;
 }
 
+.index-add-board a{
+    color: #fefdfd !important;
+}
+
+.index-add-board a:hover {
+    color: #cd0000;
+}
+
 .top-boards a {
     text-decoration: none;
     color: #181818;

@@ -3,6 +3,7 @@ Views for ForumBoard
 """
 import os
 import requests
+from django.contrib import messages
 from django.db.models import Count
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import View
@@ -183,6 +184,8 @@ def add_board(request, *args, **kwargs):
             board.board_background = request.FILES.get('board_background')
             board.approved_board = False
             board.save()
+            messages.success(request, 'Thank you, Your board is awaiting' +
+                             'approval!')
             return redirect('home')
     context = {
         'add_board_form': add_board_form,
