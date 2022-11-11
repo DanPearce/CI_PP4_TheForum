@@ -464,6 +464,11 @@ h6 {
     border: 1px solid transparent;
 }
 
+.board-detail-posts a {
+    text-decoration: none;
+    color: #181818;
+}
+
 .board-detail-posts:hover {
     border: rgba(24, 24, 24, 0.5) solid 1px;
 }

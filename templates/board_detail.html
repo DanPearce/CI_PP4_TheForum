@@ -15,34 +15,37 @@
 					<a href="#" class="btn btn-dark btn-sm sign-up-btn add-post-btn">Add Post</a>
 				</div> 
 			{% else %}
-					{% for post in page.object_list %}
-					<div class="board-detail-posts">
-						<div class="board-detail-post-title-likes">
-							{{ post.post_title }}
-							<div class="board-post-detail-likes">
-								<i class="fa-regular fa-heart"></i>
-								{{ post.likes.count }}
+				{% for post in page.object_list %}
+					<a href="{% url 'post_detail' post.slug  %}">
+						<div class="board-detail-posts">
+							<a href="{% url 'post_detail' post.slug  %}">
+							<div class="board-detail-post-title-likes">
+								{{ post.post_title }}
+								<div class="board-post-detail-likes">
+									<i class="fa-regular fa-heart"></i>
+									{{ post.likes.count }}
+								</div>
+							</div>
+							<div class="board-detail-post-image-container">
+								<img src="{{ post.featured_image.url }}" class="board-post-image">
+							</div>
+							<div class="board-detail-exceprt-creator-created">
+								{{ post.excerpt }}
+								<div class="board-detail-creator-created">
+									{{ post.creator }} {{ post.created_on }}
+								</div>
 							</div>
 						</div>
-						<div class="board-detail-post-image-container">
-							<img src="{{ post.featured_image.url }}" class="board-post-image">
-						</div>
-						<div class="board-detail-exceprt-creator-created">
-							{{ post.excerpt }}
-							<div class="board-detail-creator-created">
-								{{ post.creator }} {{ post.created_on }}
-							</div>
-						</div>
-					</div>
-					{% endfor %}
-					<div class="page-scroll">
-						{% if page.has_previous %}
-							<a href="{% url 'board_detail' board.slug %}?page={{ page.previous_page_number }}"><i class="fa-solid fa-arrow-left"></i> Previous</a>
-						{% endif %}
-						{% if page.has_next %}
-							<a href="{% url 'board_detail' board.slug %}?page={{ page.next_page_number }}">Next <i class="fa-solid fa-arrow-right"></i></a>
-						{% endif %}
-					</div>
+					</a>
+				{% endfor %}
+				<div class="page-scroll">
+					{% if page.has_previous %}
+						<a href="{% url 'board_detail' board.slug %}?page={{ page.previous_page_number }}"><i class="fa-solid fa-arrow-left"></i> Previous</a>
+					{% endif %}
+					{% if page.has_next %}
+						<a href="{% url 'board_detail' board.slug %}?page={{ page.next_page_number }}">Next <i class="fa-solid fa-arrow-right"></i></a>
+					{% endif %}
+				</div>
 			{% endif %}
 		</div>
 		<div class="col-4">
