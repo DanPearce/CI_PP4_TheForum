@@ -11,7 +11,8 @@
 			{% if posts|length <= 0 %}
 				<div class="no-posts">
 					<p>Looks like there are no posts yet!</p>
-					<p>Want to add one? Click the Add Post button on the right!</p>
+					<p>Want to add one? Click the Add Post button below!</p>
+					<a href="#" class="btn btn-dark btn-sm sign-up-btn add-post-btn">Add Post</a>
 				</div>  
 			{% else %}
 				
@@ -29,17 +30,22 @@
 				<h6>Learn more about {{ board.name }}</h6>
 				<hr class="my-4">
 				<div class="about-board">
-					<p>Description:</p>
+					<p class="board-description-title">Description:</p>
 					<p>{{ board.about | safe }}</p>
+					<div class="vr comment-line"></div>
 				</div>
 				<div class="followers-board">
-					<p>Followers:</p>
+					<p class="board-description-title">Followers:</p>
 					<p>{{ board.followers.count }}</p>
 				</div>
-				<div class="board-say-something">
-					<p>Got something to say?</p>
-					<a href="#" class="btn btn-dark btn-lg sign-up-btn comment-btn">Add Post</a>
-				</div>
+				{% if posts|length <= 0 %}
+				{% else %}
+					<div class="board-say-something">
+						<div class="vr comment-line"></div>
+						<p class="board-description-title">Got something to say?</p>
+						<a href="#" class="btn btn-dark btn-sm sign-up-btn add-post-btn">Add Post</a>
+					</div>
+				{% endif %}
 			</div>
 		</div>
 	</div>
