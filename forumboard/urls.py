@@ -11,5 +11,6 @@ urlpatterns = [
     path('board/<slug:slug>', views.BoardDetail.as_view(),
          name='board_detail'),
     path('board/<name>/add_post/', views.add_post,
-         name='add_post')
+         name='add_post'),
+    path('all_boards/', views.get_all_boards, name='all_boards')
 ]

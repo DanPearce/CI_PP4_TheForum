@@ -153,3 +153,19 @@ def add_post(request, name, *args, **kwargs):
         'board': board
     }
     return render(request, 'add_post.html', context)
+
+
+def get_all_boards(request):
+    """
+    View to generate all boards to the user
+    """
+    boards = ForumBoard.objects.annotate(count=Count(
+             'followers')).order_by('-count')
+    post_paginator = Paginator(boards, 30)
+    page_number = request.GET.get('page')
+    page = post_paginator.get_page(page_number)
+    context = {
+        'count': post_paginator.count,
+        'page': page
+    }
+    return render(request, 'all_boards.html', context)
