@@ -5,16 +5,17 @@
     {% include 'board_header.html' %}
 </section>
 <section id="add-post" class="row">
-<div class="row container-fluid board-posts">
+<div class="row container-fluid add-posts">
     <div class="col-12">
         <h6>Add a Post:</h6>
         <hr class="my-4">
         {% if user.is_authenticated %}
-        <div class="add_post-form">
+        <div class="add-post-form">
             <form method="post" id="post-form" enctype="multipart/form-data">
                 {{ add_post_form | crispy }}
                 {% csrf_token %}
-                <button type="submit" class="btn btn-dark btn-sm sign-up-btn add_post-btn">Add Post</button>
+                <a href="javascript:history.back()"><i class="fa-solid fa-arrow-left"></i> Go back</a>
+                <button type="submit" class="btn btn-dark btn-sm sign-up-btn add-post-form-btn">Add Post</button>
             </form>
         </div>
         {% else %}

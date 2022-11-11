@@ -631,19 +631,42 @@ h6 {
 'add_post.html'
 -------------*/
 #add-post {
+    width: 100%;
+    margin: 10px;
+    padding: 0;
+}
 
+.add-posts {
+    padding: 0;
 }
 
 .add-post-form {
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
 }
 
 #post-form {
-
+    width: 50%;
 }
 
-.add-post-btn {
+#post-form a {
+    text-decoration: none;
+    color: #181818;
+}
 
+#post-form a:hover {
+    color: #cd0000;
+}
+
+.add-post-form-btn {
+    float: right;
+    margin-top: 10px;
+}
+
+.form-group {
+    margin: 10px 0;
 }
 
 .post-form-no-auth {
