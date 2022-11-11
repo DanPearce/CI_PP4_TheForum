@@ -2,7 +2,7 @@
 {% block content %}
 {% load crispy_forms_tags %}
 <section id="board-header" class="row">
-    {% include 'board_header.html' %}
+        {% include 'board_header.html' %}
 </section>
 <section id="post-detail" class="row">
     <div class="col-12">
@@ -67,7 +67,6 @@
                             <i class="fa-regular fa-heart"></i>
                             {{ comment.comment_likes.count }}
                         </div>
-                        
                         {% if forloop.counter >= comments|length %}
                         {% else %}
                             <div class="vr comment-line"></div>

@@ -405,9 +405,9 @@ h6 {
     padding-right: 0;
 }
 
-/*
+/*-------------------------
 'board_header.html' STYLING
-*/
+-------------------------*/
 #board-header {
     margin: 0 auto;
     width: 100%;
@@ -438,6 +438,15 @@ h6 {
 
 .forum-board-about {
     margin: auto 0;
+    color: #fefdfd !important;
+}
+
+/*-------------------------
+'board_detail.html' STYLING
+-------------------------*/
+.board-home {
+    text-decoration: none;
+    color: #fefdfd;
 }
 
 /*
@@ -538,5 +547,5 @@ h6 {
 
 .no-comments {
     text-align: center;
-    
+
 }
