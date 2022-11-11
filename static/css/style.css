@@ -227,6 +227,9 @@ label[for=id_remember] {
 /*---------------
 'index.html' STYLING
 ---------------*/
+#home {
+    margin: 10px;
+}
 
 .display-4 {
     margin-top: 10px;
@@ -269,7 +272,6 @@ h6 {
     padding: 0;
     width: 200px;
     height: 105px;
-    background-color: #f2f2f2;
 }
 
 .top-stories img {
@@ -287,8 +289,7 @@ h6 {
     bottom: 0;
     background-color: rgba(24, 24, 24, 0.5);
     color: #fefdfd;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border-radius: 5px;
 }
 
 .article-title {
@@ -353,7 +354,7 @@ h6 {
 
 /*Top Boards*/
 .top-boards {
-    margin-top: 10px;
+    margin: 10px 0;
     padding: 0;
     width: 100%;
 }
@@ -408,6 +409,12 @@ h6 {
 /*-------------------------
 'board_header.html' STYLING
 -------------------------*/
+.board-home {
+    padding: 0;
+    text-decoration: none;
+    color: #fefdfd;
+}
+
 #board-header {
     margin: 0 auto;
     width: 100%;
@@ -444,10 +451,9 @@ h6 {
 /*-------------------------
 'board_detail.html' STYLING
 -------------------------*/
-.board-home {
-    padding: 0;
-    text-decoration: none;
-    color: #fefdfd;
+
+.board-posts {
+    margin: 10px;
 }
 
 /*

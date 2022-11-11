@@ -4,8 +4,8 @@
     {% include 'board_header.html' %}
 </section>
 <section id="board-detail" class="row">
-	<div class="col-12">
-		<div class="row container-fluid board-posts">
+	<div class="row container-fluid board-posts">
+		<div class="col-8">
 			<h6>Latest Posts</h6>
 			<hr class="my-4">
 			{% if posts|length <= 0 %}
@@ -14,14 +14,19 @@
 					<p>Want to add one? Click the Add Post button on the right!</p>
 				</div>  
 			{% else %}
+				
 				{% for post in posts %}
 				{{ post.creator }} {{ post.created_on }}
 				{{ post.post_title }}
-				{{ post.featured_image.url }}
+				<!--{{ post.featured_image.url }}-->
 				{{ post.excerpt }}
 				{{ post.likes.count }}
 				{% endfor %}
 			{% endif %}
+		</div>
+		<div class="col-4">
+			Hi
+		</div>
 	</div>
 </section>
 {% endblock %}
