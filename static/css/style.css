@@ -509,3 +509,34 @@ h6 {
     margin-top: 10px;
     justify-content: right;
 }
+
+.post-comments {
+    margin: 10px;
+    padding: 0;
+}
+
+.comment-line {
+    color: #cd0000;
+    width: 1.5px;
+    padding: 0;
+    opacity: 0.7;
+}
+
+.comment-creator-created {
+    padding: 0;
+    font-size: small;
+}
+
+.comment-likes {
+    padding: 0;
+    font-size: medium;
+}
+
+.comment-body {
+    padding: 0;
+}
+
+.no-comments {
+    text-align: center;
+    
+}

@@ -50,21 +50,30 @@
             <div class="row container-fluid post-comments">
                 <h6>Comments</h6>
                 <hr class="my-4">
-                {% for comment in comments %}
-                    <div class="comment-creator-created">
-                        {{ comment.creator }}
-                        -
-                        {{ comment.created_on }}
-                    </div>
-                    <div class="comment-body">
-                        {{ comment.body }}
-                    </div>
-                    <div class="comment-likes">
-                        <i class="fa-regular fa-heart"></i>
-                        {{ comment.comment_likes.count }}
-                    </div>
-                    <div class="vr comment-line"></div>
-                {% endfor %}
+                {% if comments|length <= 0 %}
+                    <div class="no-comments">
+                        <p>Looks like there are no comments yet!</p>
+                        <p>Got something to say? Add a comment using the comment box above!</p>
+                    </div>  
+                {% else %}
+                    {% for comment in comments %}
+                        <div class="comment-creator-created">
+                            {{ comment.creator }} - {{ comment.created_on }}
+                        </div>
+                        <div class="comment-body">
+                            {{ comment.body }}
+                        </div>
+                        <div class="comment-likes">
+                            <i class="fa-regular fa-heart"></i>
+                            {{ comment.comment_likes.count }}
+                        </div>
+                        
+                        {% if forloop.counter >= comments|length %}
+                        {% else %}
+                            <div class="vr comment-line"></div>
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
             </div>
         </div>
     </div>
