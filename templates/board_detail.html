@@ -2,6 +2,12 @@
 {% block content %}
 <section id="board-header" class="row">
     {% include 'board_header.html' %}
+	{% for message in messages %}
+		<div class="alert {{ message.tags }} alert-dismissible">
+			{{ message }}
+			<a href="#" class="close" data-bs-dismiss="alert" aria-label="close">&times;</a>
+		</div>
+	{% endfor %}
 </section>
 <section id="board-detail" class="row">
 	<div class="row container-fluid board-posts">
@@ -12,7 +18,7 @@
 				<div class="no-posts">
 					<p>Looks like there are no posts yet!</p>
 					<p>Want to add one? Click the Add Post button below!</p>
-					<a href="#" class="btn btn-dark btn-sm sign-up-btn add-post-btn">Add Post</a>
+					<a href="{% url 'add_post' board %}" class="btn btn-dark btn-sm sign-up-btn add-post-btn">Add Post</a>
 				</div> 
 			{% else %}
 				{% for post in page.object_list %}

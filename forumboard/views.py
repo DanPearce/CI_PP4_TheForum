@@ -147,6 +147,7 @@ def add_post(request, name, *args, **kwargs):
             post.forum_board = board
             post.featured_image = request.FILES.get('featured_image')
             post.save()
+            messages.success(request, 'Post added successfully!')
             return redirect(reverse('board_detail', args=[board.name]))
     context = {
         'add_post_form': add_post_form,

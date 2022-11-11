@@ -20,6 +20,10 @@
         </div>
         {% else %}
         <div class="col-12">
+            <div class="alert alert-danger alert-dismissible">
+                You must have an account, or be signed in to add a Post!
+                <a href="#" class="close" data-bs-dismiss="alert" aria-label="close">&times;</a>
+            </div>
             <div class="row container-fluid post-form-no-auth">
                 <h5>Sign in/up to share your thoughts:</h5>
                 <div class="comment-form">
