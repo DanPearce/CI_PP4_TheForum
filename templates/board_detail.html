@@ -1,6 +1,27 @@
 {% extends 'base.html' %}
 {% block content %}
 <section id="board-header" class="row">
-        {% include 'board_header.html' %}
+    {% include 'board_header.html' %}
+</section>
+<section id="board-detail" class="row">
+	<div class="col-12">
+		<div class="row container-fluid board-posts">
+			<h6>Latest Posts</h6>
+			<hr class="my-4">
+			{% if posts|length <= 0 %}
+				<div class="no-posts">
+					<p>Looks like there are no posts yet!</p>
+					<p>Want to add one? Click the Add Post button on the right!</p>
+				</div>  
+			{% else %}
+				{% for post in posts %}
+				{{ post.creator }} {{ post.created_on }}
+				{{ post.post_title }}
+				{{ post.featured_image.url }}
+				{{ post.excerpt }}
+				{{ post.likes.count }}
+				{% endfor %}
+			{% endif %}
+	</div>
 </section>
 {% endblock %}

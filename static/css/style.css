@@ -445,6 +445,7 @@ h6 {
 'board_detail.html' STYLING
 -------------------------*/
 .board-home {
+    padding: 0;
     text-decoration: none;
     color: #fefdfd;
 }
