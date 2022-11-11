@@ -15,14 +15,26 @@
 					<a href="#" class="btn btn-dark btn-sm sign-up-btn add-post-btn">Add Post</a>
 				</div>  
 			{% else %}
-				
-				{% for post in posts %}
-				{{ post.creator }} {{ post.created_on }}
-				{{ post.post_title }}
-				<!--{{ post.featured_image.url }}-->
-				{{ post.excerpt }}
-				{{ post.likes.count }}
-				{% endfor %}
+				<div class="board-detail-posts">
+					{% for post in posts %}
+						<div class="board-detail-post-title-likes">
+							{{ post.post_title }}
+							<div class="board-post-detail-likes">
+								<i class="fa-regular fa-heart"></i>
+								{{ post.likes.count }}
+							</div>
+						</div>
+						<div class="board-detail-post-image-container">
+							<img src="{{ post.featured_image.url }}" class="board-post-image">
+						</div>
+						<div class="board-detail-exceprt-creator-created">
+							{{ post.excerpt }}
+							<div class="board-detail-creator-created">
+								{{ post.creator }} {{ post.created_on }}
+							</div>
+						</div>
+					{% endfor %}
+				</div>
 			{% endif %}
 		</div>
 		<div class="col-4">

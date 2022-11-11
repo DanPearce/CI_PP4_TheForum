@@ -455,6 +455,47 @@ h6 {
     text-align: center;
 }
 
+.board-detail-posts {
+    padding: 10px;
+    margin: 10px auto;
+    border-radius: 5px;
+    border: 1px solid #fefdfd;
+    background-color: #f2f2f2;
+    border: 1px solid transparent;
+}
+
+.board-detail-posts:hover {
+    border: rgba(24, 24, 24, 0.5) solid 1px;
+}
+
+.board-detail-post-title-likes {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+.board-detail-post-image-container {
+    text-align: center;
+}
+
+.board-post-image {
+    width: 98%;
+    align-items: center;
+}
+
+.board-detail-exceprt-creator-created {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+.board-detail-creator-created {
+    font-size: small;
+}
+
 .learn-more-board {
     margin-right: 10px;
     padding-right: 12px;
