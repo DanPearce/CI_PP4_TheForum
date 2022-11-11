@@ -161,7 +161,7 @@ def get_all_boards(request):
     """
     boards = ForumBoard.objects.annotate(count=Count(
              'followers')).order_by('-count')
-    post_paginator = Paginator(boards, 30)
+    post_paginator = Paginator(boards, 20)
     page_number = request.GET.get('page')
     page = post_paginator.get_page(page_number)
     context = {
