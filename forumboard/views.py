@@ -9,7 +9,7 @@ from django.views import View
 from django.core.paginator import Paginator
 from django.template.defaultfilters import slugify
 from .models import ForumBoard, ForumPost
-from .forms import CommentForm, PostForm
+from .forms import CommentForm, PostForm, PostBoard
 
 
 if os.path.isfile('env.py'):
@@ -169,3 +169,22 @@ def get_all_boards(request):
         'page': page
     }
     return render(request, 'all_boards.html', context)
+
+def add_board(request, *args, **kwargs):
+    """
+    Render the add post html
+    """
+    add_board_form = PostBoard()
+    if request.method == 'POST':
+        add_board_form = PostBoard(request.POST, request.FILES)
+        if add_board_form.is_valid():
+            board = add_board_form.save(commit=False)
+            board.slug = slugify(request.POST['name'])
+            board.board_background = request.FILES.get('board_background')
+            board.approved_board = False
+            board.save()
+            return redirect('home')
+    context = {
+        'add_board_form': add_board_form,
+    }
+    return render(request, 'add_board.html', context)
