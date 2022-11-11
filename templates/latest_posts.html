@@ -1,7 +1,7 @@
 <div class="row container-fluid latest-posts">
-    <h6>Latest Posts</h6>
+    <h6>Top Posts</h6>
     <hr class="my-4">
-    {% for post in latest_posts %}
+    {% for post in page.object_list %}
     <a href="{% url 'post_detail' post.slug  %}">
         <div class="index-forum-post row">
             <div class="col-12">
@@ -27,4 +27,12 @@
         </div>
     </a>
     {% endfor %}
+    <div class="page-scroll">
+        {% if page.has_previous %}
+            <a href="{% url 'home' %}?page={{ page.previous_page_number }}"><i class="fa-solid fa-arrow-left"></i> Previous</a>
+        {% endif %}
+        {% if page.has_next %}
+            <a href="{% url 'home' %}?page={{ page.next_page_number }}">Next <i class="fa-solid fa-arrow-right"></i></a>
+        {% endif %}
+    </div>
 </div>

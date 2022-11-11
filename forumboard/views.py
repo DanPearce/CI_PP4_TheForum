@@ -3,6 +3,7 @@ Views for ForumBoard
 """
 import os
 import requests
+from django.db.models import Count
 from django.shortcuts import render, get_object_or_404
 from django.views import View
 from django.core.paginator import Paginator
@@ -25,11 +26,17 @@ def get_index(request):
     response = requests.get(url)
     data = response.json()
     articles = data['articles']
-    latest_posts = ForumPost.objects.order_by('-created_on')
-    top_boards = ForumBoard.objects.order_by('-created_on')
+    latest_posts = ForumPost.objects.annotate(count=Count('likes')).order_by(
+                   '-count')
+    post_paginator = Paginator(latest_posts, 5)
+    page_number = request.GET.get('page')
+    page = post_paginator.get_page(page_number)
+    top_boards = ForumBoard.objects.annotate(count=Count(
+                 'followers')).order_by('-count')
     context = {
         'articles': articles,
-        'latest_posts': latest_posts,
+        'count': post_paginator.count,
+        'page': page,
         'top_boards': top_boards,
     }
 
