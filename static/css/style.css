@@ -12,6 +12,16 @@ body {
     width: 100%;
 }
 
+.alert {
+    display: flex;
+    justify-content: space-between;
+}
+
+.alert a {
+    text-decoration: none;
+    color: inherit;
+}
+
 /*---------------
 'base.html' STYLING
 ---------------*/

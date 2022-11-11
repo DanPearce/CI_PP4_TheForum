@@ -185,7 +185,7 @@ def add_board(request, *args, **kwargs):
             board.approved_board = False
             board.save()
             messages.success(request, 'Thank you, Your board is awaiting' +
-                             'approval!')
+                             ' approval!')
             return redirect('home')
     context = {
         'add_board_form': add_board_form,
