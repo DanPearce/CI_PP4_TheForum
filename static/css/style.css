@@ -713,3 +713,45 @@ h6 {
 .go-back a:hover {
     color: #cd0000 !important;
 }
+
+/*
+'add_board.html' STYLING
+*/
+#add-board {
+    width: 100%;
+    margin: 10px;
+    padding: 0;
+}
+
+.add-boards {
+    padding: 0;
+}
+
+.add-board-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+}
+
+#post-board {
+    width: 50%;
+}
+
+#add-board a {
+    text-decoration: none;
+    color: #181818;
+}
+
+#add-board a:hover {
+    color: #cd0000;
+}
+
+.add-board-form-btn {
+    float: right;
+    margin-top: 10px;
+}
+
+.board-form-no-auth a {
+    color: #fefdfd !important;
+}
