@@ -701,3 +701,7 @@ h6 {
 .all-boards:hover {
     border: rgba(24, 24, 24, 0.5) solid 1px;
 }
+
+.go-back a:hover {
+    color: #cd0000 !important;
+}

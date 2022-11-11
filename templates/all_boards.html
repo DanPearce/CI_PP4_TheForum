@@ -5,6 +5,9 @@
 		<div class="col-12">
 			<h6>All Boards</h6>
 			<hr class="my-4">
+            <div class="go-back">
+                <a href="javascript:history.back()"><i class="fa-solid fa-arrow-left"></i> Go back</a>
+            </div>
             <div class="board-box">
                 {% for board in page.object_list %}
                     {% if board.approved_board %}
@@ -22,6 +25,14 @@
                         </a>
                     {% endif %}
                 {% endfor %}
+            </div>
+            <div class="page-scroll">
+                {% if page.has_previous %}
+                    <a href="{% url 'all_boards' %}?page={{ page.previous_page_number }}"><i class="fa-solid fa-arrow-left"></i> Previous</a>
+                {% endif %}
+                {% if page.has_next %}
+                    <a href="{% url 'all_boards' %}?page={{ page.next_page_number }}">Next <i class="fa-solid fa-arrow-right"></i></a>
+                {% endif %}
             </div>
         </div>
     </div>

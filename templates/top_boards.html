@@ -1,7 +1,7 @@
 <div class="row container-fluid top-boards">
     <div class="top-boards-title">
         <h6>Top Boards</h6>
-        <a class="view_all_boards" href="#">View All</a>
+        <a class="view_all_boards" href="{% url 'all_boards' %}">View All</a>
     </div>
     <hr class="my-4">
     {% for board in top_boards %}
