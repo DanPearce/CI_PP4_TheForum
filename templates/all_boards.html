@@ -1,4 +1,31 @@
 {% extends 'base.html' %}
 {% block content %}
-      
+<section id="all-boards" class="row">
+	<div class="row container-fluid board-posts">
+		<div class="col-8">
+			<h6>All Boards</h6>
+			<hr class="my-4">
+            {% for board in page.object_list %}
+                {% if board.approved_board %}
+                        <a href="{% url 'board_detail' board.slug  %}">
+                            <div class="index-forum-board row">
+                                <div class="col-12">
+                                    <div class="board-name">
+                                        {{ board.name }}
+                                    </div>
+                                    <div class="board-about">
+                                        {{ board.about | safe }}
+                                    </div>
+                                    <div class="board-followers">
+                                        <i class="fa-solid fa-user-check"></i>
+                                        {{ board.followers.count }}
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</section>      
 {% endblock %}
