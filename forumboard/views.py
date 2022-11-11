@@ -5,7 +5,8 @@ import os
 import requests
 from django.shortcuts import render, get_object_or_404
 from django.views import View
-from .models import ForumBoard, ForumPost, Comment
+from django.core.paginator import Paginator
+from .models import ForumBoard, ForumPost
 from .forms import CommentForm
 
 
@@ -105,12 +106,16 @@ class BoardDetail(View):
         queryset = ForumBoard.objects
         board = get_object_or_404(queryset, slug=slug)
         posts = board.posts.order_by('-created_on')
+        post_paginator = Paginator(posts, 5)
+        page_number = request.GET.get('page')
+        page = post_paginator.get_page(page_number)
         following = False
         if board.followers.filter(id=self.request.user.id).exists():
             following = True
         context = {
             'board': board,
-            'posts': posts,
+            'count': post_paginator.count,
+            'page': page,
             'following': following
         }
 

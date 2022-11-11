@@ -8,15 +8,15 @@
 		<div class="col-8">
 			<h6>Latest Posts</h6>
 			<hr class="my-4">
-			{% if posts|length <= 0 %}
+			{% if page.object_list|length <= 0 %}
 				<div class="no-posts">
 					<p>Looks like there are no posts yet!</p>
 					<p>Want to add one? Click the Add Post button below!</p>
 					<a href="#" class="btn btn-dark btn-sm sign-up-btn add-post-btn">Add Post</a>
-				</div>  
+				</div> 
 			{% else %}
-				<div class="board-detail-posts">
-					{% for post in posts %}
+					{% for post in page.object_list %}
+					<div class="board-detail-posts">
 						<div class="board-detail-post-title-likes">
 							{{ post.post_title }}
 							<div class="board-post-detail-likes">
@@ -33,8 +33,16 @@
 								{{ post.creator }} {{ post.created_on }}
 							</div>
 						</div>
+					</div>
 					{% endfor %}
-				</div>
+					<div class="page-scroll">
+						{% if page.has_previous %}
+							<a href="{% url 'board_detail' board.slug %}?page={{ page.previous_page_number }}"><i class="fa-solid fa-arrow-left"></i> Previous</a>
+						{% endif %}
+						{% if page.has_next %}
+							<a href="{% url 'board_detail' board.slug %}?page={{ page.next_page_number }}">Next <i class="fa-solid fa-arrow-right"></i></a>
+						{% endif %}
+					</div>
 			{% endif %}
 		</div>
 		<div class="col-4">
@@ -50,7 +58,7 @@
 					<p class="board-description-title">Followers:</p>
 					<p>{{ board.followers.count }}</p>
 				</div>
-				{% if posts|length <= 0 %}
+				{% if page.object_list|length <= 0 %}
 				{% else %}
 					<div class="board-say-something">
 						<div class="vr comment-line"></div>

@@ -490,10 +490,22 @@ h6 {
     margin-top: 10px;
     padding-left: 1%;
     padding-right: 1%;
+    font-size: small;
 }
 
-.board-detail-creator-created {
-    font-size: small;
+.page-scroll {
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.page-scroll a {
+    color: #181818;
+    text-decoration: none;
+}
+
+.page-scroll a:hover {
+    color: #cd0000;
 }
 
 .learn-more-board {
