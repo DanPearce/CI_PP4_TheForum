@@ -25,7 +25,22 @@
 			{% endif %}
 		</div>
 		<div class="col-4">
-			Hi
+			<div class="learn-more-board">
+				<h6>Learn more about {{ board.name }}</h6>
+				<hr class="my-4">
+				<div class="about-board">
+					<p>Description:</p>
+					<p>{{ board.about | safe }}</p>
+				</div>
+				<div class="followers-board">
+					<p>Followers:</p>
+					<p>{{ board.followers.count }}</p>
+				</div>
+				<div class="board-say-something">
+					<p>Got something to say?</p>
+					<a href="#" class="btn btn-dark btn-lg sign-up-btn comment-btn">Add Post</a>
+				</div>
+			</div>
 		</div>
 	</div>
 </section>
