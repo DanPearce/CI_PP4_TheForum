@@ -4,11 +4,12 @@ Views for ForumBoard
 import os
 import requests
 from django.db.models import Count
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import View
 from django.core.paginator import Paginator
+from django.template.defaultfilters import slugify
 from .models import ForumBoard, ForumPost
-from .forms import CommentForm
+from .forms import CommentForm, PostForm
 
 
 if os.path.isfile('env.py'):
@@ -127,3 +128,28 @@ class BoardDetail(View):
         }
 
         return render(request, 'board_detail.html', context)
+
+
+def add_post(request, name, *args, **kwargs):
+    """
+    Render the add post html
+    """
+    queryset = ForumBoard.objects
+    board = get_object_or_404(queryset, name=name)
+    add_post_form = PostForm()
+    if request.method == 'POST':
+        add_post_form = PostForm(request.POST, request.FILES)
+        if add_post_form.is_valid():
+            post = add_post_form.save(commit=False)
+            post.slug = slugify(request.POST['post_title'])
+            post.creator = request.user
+            post.forum_board = board
+            post.featured_image = request.FILES.get('featured_image')
+            post.save()
+            return redirect(reverse('board_detail', args=[board.name]))
+    context = {
+        'add_post_form': add_post_form,
+        'forum_board': board,
+        'board': board
+    }
+    return render(request, 'add_post.html', context)

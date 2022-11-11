@@ -1,4 +1,4 @@
-from .models import Comment
+from .models import Comment, ForumPost
 from django import forms
 
 
@@ -9,3 +9,13 @@ class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment
         fields = ('body',)
+
+class PostForm(forms.ModelForm):
+    """
+    Class to allow us to use the Post Form
+    """
+    class Meta:
+        model = ForumPost
+        fields = ('post_title', 'featured_image', 'post_detail',
+                  'excerpt',)
+

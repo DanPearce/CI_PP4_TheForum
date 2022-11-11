@@ -10,4 +10,6 @@ urlpatterns = [
     path('<slug:slug>', views.PostDetail.as_view(), name='post_detail'),
     path('board/<slug:slug>', views.BoardDetail.as_view(),
          name='board_detail'),
+    path('board/<name>/add_post/', views.add_post,
+         name='add_post')
 ]
