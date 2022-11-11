@@ -17,7 +17,7 @@
             <img class="post-detail-image" src="{{ post.featured_image.url }}" alt="Image relating to {{ post.pos_title }}">
         </div>
         <div class="post-detail-content">
-            {{ post.post_detail }}
+            {{ post.post_detail | safe }}
         </div>
         <div class="post-detail-created-creator">
             Posted on {{ post.created_on }}
