@@ -12,6 +12,16 @@ body {
     width: 100%;
 }
 
+/* Likes */
+.btn-like {
+    border: 1px solid transparent;
+}
+
+.btn-red {
+    color: #cd0000;
+}
+
+/*Alerts*/
 .alert {
     display: flex;
     justify-content: space-between;

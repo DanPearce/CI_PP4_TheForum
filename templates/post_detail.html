@@ -13,7 +13,7 @@
                     <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
                     {% csrf_token %}
                     {% if liked %}
-                        <button type="submit" name="post_id" value="{{ post.slug }}" class="btn-like"><i class="fa-solid fa-heart"></i></button>
+                        <button type="submit" name="post_id" value="{{ post.slug }}" class="btn-like btn-red"><i class="fa-solid fa-heart"></i></button>
                     {% else %}
                         <button type="submit" name="post_id" value="{{ post.slug }}" class="btn-like"><i class="fa-regular fa-heart"></i></button>
                     {% endif %}
