@@ -615,6 +615,22 @@ h6 {
     color: #cd0000;
 }
 
+.delete-post-modal {
+    background: none;
+    border: none;
+    text-decoration: underline;
+}
+
+.delete-post-modal:hover {
+    color:#cd0000;
+}
+
+.close {
+    text-decoration: none;
+    background: none;
+    border: none;
+}
+
 
 /* Comment Section */
 .post-comment {
@@ -801,4 +817,17 @@ h6 {
 
 .board-form-no-auth a {
     color: #fefdfd !important;
+}
+
+/*--------------------
+'contact.html' STYLING
+--------------------*/
+
+#contact {
+    margin: 10px;
+}
+
+#contact #div_id_body {
+    width: auto;
+    border: none;
 }

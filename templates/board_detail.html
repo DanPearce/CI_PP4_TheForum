@@ -64,7 +64,6 @@
 				<div class="about-board">
 					<p class="board-description-title">Description:</p>
 					<p>{{ board.about | safe }}</p>
-					<div class="vr comment-line"></div>
 				</div>
 				<div class="followers-board">
 					<p class="board-description-title">Follow this board?</p>
@@ -95,7 +94,6 @@
 				{% if page.object_list|length <= 0 %}
 				{% else %}
 					<div class="board-say-something">
-						<div class="vr comment-line"></div>
 						<p class="board-description-title">Got something to say?</p>
 						<a href="{% url 'add_post' board %}" class="btn btn-dark btn-sm sign-up-btn add-post-btn">Add Post</a>
 					</div>

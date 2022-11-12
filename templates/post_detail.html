@@ -35,7 +35,7 @@
                 {% if user.id == post.creator.id %}
                     <small>
                         <a href="{% url 'edit_post' post.id %}">Edit Post</a>
-                        <button type="button" data-bs-toggle="modal" data-bs-target="#delete-post-modal">
+                        <button class="delete-post-modal" type="button" data-bs-toggle="modal" data-bs-target="#delete-post-modal">
                             Delete Post
                         </button>
                     </small>
@@ -46,7 +46,7 @@
                 {% endif %}
             {% endif %}
         </div>
-        <div class="modal delete-post-modal" id="delete-post-modal" tabindex="-1" role="dialog">
+        <div class="modal" id="delete-post-modal" tabindex="-1" role="dialog">
             <div class="modal-dialog modal-dialog-centered" role="document">
               <div class="modal-content">
                 <div class="modal-header">
