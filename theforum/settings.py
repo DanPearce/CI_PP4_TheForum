@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'django_summernote',
     'forumboard',
+    'contact',
 ]
 
 SITE_ID = 1
