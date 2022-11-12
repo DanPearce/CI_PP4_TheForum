@@ -264,6 +264,21 @@ class EditPost(View):
         if request.user == post.creator:
             if edit_post_form.is_valid():
                 edit_post_form.save()
-                messages.add_message(request, messages.SUCCESS,
-                                     'Post successfully amended!')
+                messages.success(request, 'Your post has successfully been' +
+                                 ' edited!')
         return redirect('home')
+
+
+@login_required
+def delete_post(request, id, *args, **kwargs):
+    """
+    View to allow us to delete a post we have created.
+    """
+    queryset = ForumPost.objects
+    post = get_object_or_404(queryset, id=id)
+
+    if request.user == post.creator:
+        post.delete()
+        messages.success(request, 'Your post has successfully been deleted!')
+
+    return redirect('home')

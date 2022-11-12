@@ -17,5 +17,6 @@ urlpatterns = [
     path('like/<slug:slug>', views.PostLike.as_view(), name='post_like'),
     path('follow/<slug:slug>', views.BoardFollow.as_view(),
          name='board_follow'),
-    path('board/edit/<int:id>', views.EditPost.as_view(), name='edit_post')
+    path('board/edit/<int:id>', views.EditPost.as_view(), name='edit_post'),
+    path('delete-post/<int:id>', views.delete_post, name='delete_post')
 ]
