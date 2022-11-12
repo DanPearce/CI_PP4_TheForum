@@ -15,5 +15,7 @@ urlpatterns = [
     path('all_boards/', views.get_all_boards, name='all_boards'),
     path('add_board/', views.add_board, name='add_board'),
     path('like/<slug:slug>', views.PostLike.as_view(), name='post_like'),
-    path('follow/<slug:slug>', views.BoardFollow.as_view(), name='board_follow'),
+    path('follow/<slug:slug>', views.BoardFollow.as_view(),
+         name='board_follow'),
+    path('board/edit/<int:id>', views.EditPost.as_view(), name='edit_post')
 ]

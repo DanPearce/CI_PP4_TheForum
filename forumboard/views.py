@@ -4,10 +4,12 @@ Views for ForumBoard
 import os
 import requests
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.db.models import Count
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import View
+from django.utils.decorators import method_decorator
 from django.core.paginator import Paginator
 from django.template.defaultfilters import slugify
 from .models import ForumBoard, ForumPost
@@ -82,7 +84,7 @@ class PostDetail(View):
         liked = False
         if post.likes.filter(id=self.request.user.id).exists():
             liked = True
-        
+      
         comment_form = CommentForm(data=request.POST)
         if comment_form.is_valid():
             comment_form.instance.name = request.user.username
@@ -149,7 +151,7 @@ def add_post(request, name, *args, **kwargs):
             post.featured_image = request.FILES.get('featured_image')
             post.save()
             messages.success(request, 'Post added successfully!')
-            return redirect(reverse('board_detail', args=[board.name]))
+            return redirect(reverse('board_detail', args=[board.name.lower()]))
     context = {
         'add_post_form': add_post_form,
         'forum_board': board,
@@ -172,6 +174,7 @@ def get_all_boards(request):
         'page': page
     }
     return render(request, 'all_boards.html', context)
+
 
 def add_board(request, *args, **kwargs):
     """
@@ -227,3 +230,40 @@ class BoardFollow(View):
             board.followers.add(request.user)
 
         return HttpResponseRedirect(reverse('board_detail', args=[slug]))
+
+
+@method_decorator(login_required, name='post')
+class EditPost(View):
+    """
+    View to allow us to edit existing posts
+    """
+    def get(self, request, id, *args, **kwargs):
+        """
+        Retrives the data from the original post
+        """
+        queryset = ForumPost.objects
+        post = get_object_or_404(queryset, id=id)
+
+        return render(
+            request,
+            'edit_post.html',
+            {
+                'edit_post_form': PostForm(instance=post)
+            }
+        )
+
+    def post(self, request, post, *args, **kwargs):
+        """
+        Allows us to post the edited version to the database.
+        """
+        queryset = ForumPost.objects
+        post = get_object_or_404(queryset, post=id)
+
+        edit_post_form = PostForm(request.POST, instance=post)
+
+        if request.user == post.creator:
+            if edit_post_form.is_valid():
+                edit_post_form.save()
+                messages.add_message(request, messages.SUCCESS,
+                                     'Post successfully amended!')
+        return redirect('home')

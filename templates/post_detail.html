@@ -30,8 +30,18 @@
         <div class="post-detail-image-container">
             <img class="post-detail-image" src="{{ post.featured_image.url }}" alt="Image relating to {{ post.pos_title }}">
         </div>
-        <div class="post-detail-content">
-            {{ post.post_detail | safe }}
+        <div class="post-edit-delete">        
+            {% if user.is_authenticated %}
+                {% if user.id == post.creator.id %}
+                    <small>
+                        <a href="{% url 'edit_post' post.id %}">Edit Post</a>
+                        <a href="#">Delete Post</a>
+                    </small>
+                {% endif %}
+                <small>
+                    <a href="#">Report Post</a>
+                </small>
+            {% endif %}
         </div>
         <div class="post-detail-created-creator">
             Posted on {{ post.created_on }}
