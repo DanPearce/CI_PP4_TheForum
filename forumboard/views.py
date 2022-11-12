@@ -252,12 +252,12 @@ class EditPost(View):
             }
         )
 
-    def post(self, request, post, *args, **kwargs):
+    def post(self, request, id, *args, **kwargs):
         """
         Allows us to post the edited version to the database.
         """
         queryset = ForumPost.objects
-        post = get_object_or_404(queryset, post=id)
+        post = get_object_or_404(queryset, id=id)
 
         edit_post_form = PostForm(request.POST, instance=post)
 

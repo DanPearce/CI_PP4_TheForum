@@ -37,10 +37,11 @@
                         <a href="{% url 'edit_post' post.id %}">Edit Post</a>
                         <a href="#">Delete Post</a>
                     </small>
+                {% else %}
+                    <small>
+                        <a href="#">Report Post</a>
+                    </small>
                 {% endif %}
-                <small>
-                    <a href="#">Report Post</a>
-                </small>
             {% endif %}
         </div>
         <div class="post-detail-created-creator">

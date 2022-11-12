@@ -602,6 +602,20 @@ h6 {
     font-size: small;
 }
 
+.post-edit-delete {
+    margin-left: 1%;
+    padding-right: 10px;
+}
+
+.post-edit-delete a {
+    color: #181818;
+}
+
+.post-edit-delete a:hover {
+    color: #cd0000;
+}
+
+
 /* Comment Section */
 .post-comment {
     padding: 0;
@@ -735,6 +749,7 @@ h6 {
 
 .go-back {
     margin-top: 10px;
+    margin-left: 10px;
 }
 
 .go-back a {
