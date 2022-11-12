@@ -143,9 +143,9 @@ def add_post(request, name, *args, **kwargs):
         add_post_form = PostForm(request.POST, request.FILES)
         if add_post_form.is_valid():
             post = add_post_form.save(commit=False)
-            post.slug = slugify(request.POST['post_title'])
             post.creator = request.user
             post.forum_board = board
+            post.slug = slugify(f'{post.forum_board}-{post.post_title}')
             post.featured_image = request.FILES.get('featured_image')
             post.save()
             messages.success(request, 'Post added successfully!')
