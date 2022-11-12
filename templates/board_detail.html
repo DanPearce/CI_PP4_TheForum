@@ -1,14 +1,17 @@
 {% extends 'base.html' %}
 {% block content %}
+{% for message in messages %}
+<div class="alert {{ message.tags }} alert-dismissible">
+	{{ message }}
+	<a href="#" class="close" data-bs-dismiss="alert" aria-label="close">&times;</a>
+</div>
+{% endfor %}
 <section id="board-header" class="row">
     {% include 'board_header.html' %}
-	{% for message in messages %}
-		<div class="alert {{ message.tags }} alert-dismissible">
-			{{ message }}
-			<a href="#" class="close" data-bs-dismiss="alert" aria-label="close">&times;</a>
-		</div>
-	{% endfor %}
 </section>
+<div class="go-back">
+    <a href="javascript:history.back()"><i class="fa-solid fa-arrow-left"></i> Go back</a>
+</div>
 <section id="board-detail" class="row">
 	<div class="row container-fluid board-posts">
 		<div class="col-8">

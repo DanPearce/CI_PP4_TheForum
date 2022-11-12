@@ -725,6 +725,15 @@ h6 {
     border: rgba(24, 24, 24, 0.5) solid 1px;
 }
 
+.go-back {
+    margin-top: 10px;
+}
+
+.go-back a {
+    color: #181818 !important;
+    text-decoration: none;
+}
+
 .go-back a:hover {
     color: #cd0000 !important;
 }

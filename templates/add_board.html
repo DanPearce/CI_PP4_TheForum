@@ -1,6 +1,9 @@
 {% extends 'base.html' %}
 {% block content %}
 {% load crispy_forms_tags %}
+<div class="go-back">
+    <a href="javascript:history.back()"><i class="fa-solid fa-arrow-left"></i> Go back</a>
+</div>
 <section id="add-board" class="row">
     <div class="row container-fluid add-boards">
         <div class="col-12">
@@ -11,7 +14,6 @@
                 <form method="POST" id="board-form" enctype="multipart/form-data">
                     {{ add_board_form | crispy }}
                     {% csrf_token %}
-                    <a href="javascript:history.back()"><i class="fa-solid fa-arrow-left"></i> Go back</a>
                     <button type="submit" class="btn btn-dark btn-sm sign-up-btn add-board-form-btn">Add Board</button>
                 </form>
             </div>
