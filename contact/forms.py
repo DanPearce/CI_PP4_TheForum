@@ -9,5 +9,6 @@ class ContactForm(forms.ModelForm):
     """
     Class to allow us to use the contact form
     """
-    model = Contact
-    fields = ('first_name', 'last_name', 'email', 'body')
+    class Meta:
+        model = Contact
+        fields = ('first_name', 'last_name', 'email', 'body')

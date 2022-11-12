@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load crispy_forms_tags %}
+<div class="go-back">
+    <a href="javascript:history.back()"><i class="fa-solid fa-arrow-left"></i> Go back</a>
+</div>
+<section id="add-post" class="row">
+<div class="row container-fluid add-posts">
+    <div class="col-12">
+        <h6>Contact Us:</h6>
+        <hr class="my-4">
+        <div class="add-post-form">
+            <form method="post" id="post-form" enctype="multipart/form-data">
+                {{ contact_form | crispy }}
+                {% csrf_token %}
+                <button type="submit" class="btn btn-dark btn-sm sign-up-btn add-post-form-btn">Make Changes</button>
+            </form>
+        </div>
+    </div>
+</div>
+</section>
+{% endblock %}
