@@ -9,7 +9,18 @@
         <div class="post-detail-title-likes">
             <span class="post-detail-title"><h4>{{ post.post_title }}</h4></span>
             <span class="post-detail-likes">
-                <i class="fa-regular fa-heart"></i>
+                {% if user.is_authenticated %}
+                    <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
+                    {% csrf_token %}
+                    {% if liked %}
+                        <button type="submit" name="post_id" value="{{ post.slug }}" class="btn-like"><i class="fa-solid fa-heart"></i></button>
+                    {% else %}
+                        <button type="submit" name="post_id" value="{{ post.slug }}" class="btn-like"><i class="fa-regular fa-heart"></i></button>
+                    {% endif %}
+                    </form>
+                {% else %}
+                    <i class="fa-regular fa-heart"></i>
+                {% endif %}
                 {{ post.likes.count }}
             </span>
         </div>
