@@ -67,8 +67,30 @@
 					<div class="vr comment-line"></div>
 				</div>
 				<div class="followers-board">
-					<p class="board-description-title">Followers:</p>
-					<p>{{ board.followers.count }}</p>
+					<p class="board-description-title">Follow this board?</p>
+					{% if user.is_authenticated %}
+                    	<form class="d-inline" action="{% url 'board_follow' board.slug %}" method="POST">
+                    	{% csrf_token %}
+                    	{% if following %}
+							<div class="following">
+								You are following {{ board.name }}!
+                        		<button type="submit" name="board_id" value="{{ board.slug }}" class="btn-like btn-red"><i class="fa-solid fa-user-plus"></i></button>
+							</div>
+                    	{% else %}
+							<div class="following">
+								Click the plus icon to follow! 
+                        		<button type="submit" name="board_id" value="{{ board.slug }}" class="btn-like"> <i class="fa-solid fa-user-plus"></i></button>
+							</div>
+						{% endif %}
+                    	</form>
+					{% else %}
+						You must be signed in to follow!
+						<i class="fa-solid fa-user-plus"></i>
+						<a href="{% url 'account_login' %}" class="btn btn-dark btn-sm sign-up-btn follow-btn">Sign in</a>
+						<a href="{% url 'account_signup' %}" class="btn btn-dark btn-sm sign-up-btn follow-btn">Sign up</a>
+					{% endif %}
+					<p>Did you know following this board will also raise it up in our top boards list?</p>
+					<p>{{ board.followers.count }} Followers</p>
 				</div>
 				{% if page.object_list|length <= 0 %}
 				{% else %}

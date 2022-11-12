@@ -200,7 +200,7 @@ class PostLike(View):
     Render the view to allow us to post a like/remove a like
     """
     def post(self, request, slug, *args, **kwargs):
-        """ 
+        """
         Post/Remove likes on posts
         """
         post = get_object_or_404(ForumPost, slug=slug)
@@ -210,3 +210,20 @@ class PostLike(View):
             post.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+
+
+class BoardFollow(View):
+    """
+    Render the view to allow us to post a like/remove a follow
+    """
+    def post(self, request, slug, *args, **kwargs):
+        """
+        Post/Remove follows on boards
+        """
+        board = get_object_or_404(ForumBoard, slug=slug)
+        if board.followers.filter(id=request.user.id).exists():
+            board.followers.remove(request.user)
+        else:
+            board.followers.add(request.user)
+
+        return HttpResponseRedirect(reverse('board_detail', args=[slug]))
