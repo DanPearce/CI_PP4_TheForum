@@ -13,5 +13,6 @@ urlpatterns = [
     path('board/<name>/add_post/', views.add_post,
          name='add_post'),
     path('all_boards/', views.get_all_boards, name='all_boards'),
-    path('add_board/', views.add_board, name='add_board')
+    path('add_board/', views.add_board, name='add_board'),
+    path('like/<slug:slug>', views.PostLike.as_view(), name='post_like'),
 ]

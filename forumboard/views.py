@@ -5,6 +5,7 @@ import os
 import requests
 from django.contrib import messages
 from django.db.models import Count
+from django.http import HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import View
 from django.core.paginator import Paginator
@@ -192,3 +193,20 @@ def add_board(request, *args, **kwargs):
         'add_board_form': add_board_form,
     }
     return render(request, 'add_board.html', context)
+
+
+class PostLike(View):
+    """
+    Render the view to allow us to post a like/remove a like
+    """
+    def post(self, request, slug, *args, **kwargs):
+        """ 
+        Post/Remove likes on posts
+        """
+        post = get_object_or_404(ForumPost, slug=slug)
+        if post.likes.filter(id=request.user.id).exists():
+            post.likes.remove(request.user)
+        else:
+            post.likes.add(request.user)
+
+        return HttpResponseRedirect(reverse('post_detail', args=[slug]))
