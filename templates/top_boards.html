@@ -4,24 +4,26 @@
         <a class="view_all_boards" href="{% url 'all_boards' %}">View All</a>
     </div>
     <hr class="my-4">
-    {% for board in top_boards %}
-        {% if board.approved_board %}
-            {% if forloop.counter < 11 %}
-                <a href="{% url 'board_detail' board.slug  %}">
-                    <div class="index-forum-board row">
-                        <div class="col-12">
-                            <div class="board-name">
-                                {{ board.name }}
-                            </div>
-                            <div class="board-about">
-                                {{ board.about | safe }}
+    <div class="all-top-boards">
+        {% for board in top_boards %}
+            {% if board.approved_board %}
+                {% if forloop.counter < 11 %}
+                    <a href="{% url 'board_detail' board.slug  %}">
+                        <div class="index-forum-board row">
+                            <div class="col-12">
+                                <div class="board-name">
+                                    {{ board.name }}
+                                </div>
+                                <div class="board-about">
+                                    {{ board.about | safe }}
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </a>
+                    </a>
+                {% endif %}
             {% endif %}
-        {% endif %}
-    {% endfor %}
+        {% endfor %}
+    </div>
     <div class="index-add-board">
         <p class="board-description-title">Got a good idea for a new board?</p>
         <a href="{% url 'add_board' %}" class="btn btn-dark btn-sm sign-up-btn add-post-btn">Add Board</a>

@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 <div id="home" class="row">
-    <div class="col-12 zero-right-padding">
+    <div class="col-12 zero-right-padding zero-left-padding">
         {% for message in messages %}
             <div class="alert {{ message.tags }} alert-dismissible">
                 {{ message }}
@@ -9,7 +9,7 @@
             </div>
         {% endfor %}
         {% if not user.is_authenticated %}
-        <div class="jumbotron text-center">
+        <div class="jumbotron text-center zero-left-padding">
             <h1 class="display-4">Welcome to theforum</h1>
             <p class="lead">Start the conversation today.</p>                    
             <p>Join the community and start sharing your thoughts.</p>
@@ -21,7 +21,7 @@
             <hr class="my-4">
             {% for article in articles %}
                 {% if forloop.counter < 5 %}
-                    <div class="col-sm-3 top-stories text-wrap">
+                    <div class="col-sm-3 top-stories text-wrap {% cycle 'news-1' 'news-2' 'news-3' 'news-4'%}">
                         <img src="{{ article.urlToImage }}" alt="This image relates to {{ article.title }}">
                         <a href="{{ article.url }}" target="_blank" class="text-wrap" aria-label="Visit the news article site, releated to latest headline {{ article.title }}"><span class="article-title">{{ article.title }}</span></a>
                         </a>
@@ -30,10 +30,10 @@
             {% endfor %}
         </div>
     </div>
-    <div class="col-8">
+    <div class="col-md-8 col-sm- zero-right-padding">
         {% include 'latest_posts.html' %}
     </div>
-    <div class="col-4">
+    <div class="col-md-4 col-sm-12">
         {% include 'top_boards.html' %}
     </div>
 </div>
