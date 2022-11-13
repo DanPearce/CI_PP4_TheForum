@@ -5,7 +5,8 @@
     {% include 'board_header.html' %}
 </section>
 <div class="go-back">
-    <a href="javascript:history.back()"><i class="fa-solid fa-arrow-left"></i> Go back</a>
+    <a href="{% url 'home' %}"><i class="fa-solid fa-house-chimney"></i></a>
+    <a href="{% url 'board_detail' board.slug %}">{{ board.name }}</a>
 </div>
 <section id="add-post" class="row">
 <div class="row container-fluid add-posts">

@@ -764,13 +764,13 @@ h6 {
 }
 
 .go-back {
-    margin-top: 10px;
-    margin-left: 10px;
+    margin: 10px 20px;
 }
 
 .go-back a {
     color: #181818 !important;
     text-decoration: none;
+    padding-right: 10px
 }
 
 .go-back a:hover {
@@ -830,6 +830,7 @@ h6 {
 #contact #div_id_body {
     width: auto;
     border: none;
+    height: auto;
 }
 
 /*---------------
