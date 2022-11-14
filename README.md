@@ -215,7 +215,7 @@ All models used/created in this project have been used to recreate the model str
 
 ### Fonts and Icons
 #### Fonts
-There main font used throughout the website is [Overpass](https://fonts.google.com/specimen/Overpass), I chose this as while designing the logo. As I wanted to use a font that felt natural and joined the words 'theforum' easily, I landed on this font as I felt this was achieved with this font!
+The main font used throughout the website is [Overpass](https://fonts.google.com/specimen/Overpass), I chose this whilst designing the logo. As I wanted to use a font that felt natural and joined the words 'theforum' easily, I landed on this font as I felt this was achieved.
 
 The other font used is [Nunito](https://fonts.google.com/specimen/Nunito) and this is simply to make the footer fonts stand out and be seperated from the main site. 
 
@@ -224,7 +224,16 @@ I used [favicon.io](https://favicon.io/) to create the favicon icons for the sit
 
 Icons from [Font Awesome](https://fontawesome.com/) we're also used throughout the site.
 
-### Colour 
+### Colour
+The colours I have used provide the site with a clean and modern look - with the use of colours that deliberatly contrast in order to make the site stand apart from its peers and to also ensure that the site is easily viewable by all.
+
+The colours have also been chosen to provide a memberable site to the end user, and I delibertaely went with a red colour as this site is least used amongst the social media platforms.
+
+Please find the colours in the pallete below, created by using [Coolors.co](https://coolors.co/)
+
+<details><summary>Palette</summary>
+<img src="docs/theforum/colour-palette.png">
+</details>
 
 ## Main Features
 
