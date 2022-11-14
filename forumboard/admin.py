@@ -1,8 +1,12 @@
 """
-Admin set up for ForumBoard and it's posts/comments
+Admin view for forumboard
 """
+# Imports
+# -----------------------------------------------------------------------
+# Third Party
 from django.contrib import admin
 from django_summernote.admin import SummernoteModelAdmin
+# Internal
 from .models import ForumBoard, ForumPost, Comment
 
 

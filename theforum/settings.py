@@ -9,10 +9,16 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
-from django.contrib.messages import constants as messages
+# Imports
+# -----------------------------------------------------------------------
+# Python Standard
 from pathlib import Path
 import os
+# Imports
+# -----------------------------------------------------------------------
+from django.contrib.messages import constants as messages
 import dj_database_url
+
 if os.path.isfile('env.py'):
     import env
 
@@ -30,8 +36,10 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+# Allowed Hosts
 ALLOWED_HOSTS = ['ci-pp4-theforum-danpearce.herokuapp.com', 'localhost']
 
+# Email Hosts (Used for contact app)
 EMAIL_HOST = os.environ.get('EMAIL_HOST')
 EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')

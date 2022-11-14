@@ -1,8 +1,11 @@
 """
 URLs for forumboard
-Imports for URLs
 """
+# Imports
+# -----------------------------------------------------------------------
+# Third Party
 from django.urls import path
+# Internal 
 from . import views
 
 urlpatterns = [

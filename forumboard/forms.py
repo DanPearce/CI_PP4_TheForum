@@ -1,5 +1,12 @@
-from .models import Comment, ForumPost, ForumBoard
+"""
+Forms used in forumboard
+"""
+# Imports
+# -----------------------------------------------------------------------
+# Third Party
 from django import forms
+# Internal
+from .models import Comment, ForumPost, ForumBoard
 
 
 class CommentForm(forms.ModelForm):

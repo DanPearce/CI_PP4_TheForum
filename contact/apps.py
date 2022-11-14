@@ -1,3 +1,9 @@
+"""
+apps.py for contact (Django Built In)
+"""
+# Imports
+# -----------------------------------------------------------------------
+# Third Party
 from django.apps import AppConfig
 
 

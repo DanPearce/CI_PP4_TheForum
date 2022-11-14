@@ -1,7 +1,11 @@
 """
-Views for ForumBoard
+Views for forumboard
 """
+# Imports
+# -----------------------------------------------------------------------
+# Python Standard
 import os
+# Third Party
 import requests
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
@@ -12,6 +16,7 @@ from django.views import View
 from django.utils.decorators import method_decorator
 from django.core.paginator import Paginator
 from django.template.defaultfilters import slugify
+# Internal
 from .models import ForumBoard, ForumPost
 from .forms import CommentForm, PostForm, PostBoard
 
@@ -84,7 +89,7 @@ class PostDetail(View):
         liked = False
         if post.likes.filter(id=self.request.user.id).exists():
             liked = True
-      
+
         comment_form = CommentForm(data=request.POST)
         if comment_form.is_valid():
             comment_form.instance.name = request.user.username
@@ -157,7 +162,7 @@ def add_post(request, name, *args, **kwargs):
         else:
             add_post_form = PostForm
             messages.error(request, 'There was an error adding your' +
-                            ' post, please try again!')
+                           ' post, please try again!')
     context = {
         'add_post_form': add_post_form,
         'forum_board': board,
@@ -199,7 +204,7 @@ def add_board(request, *args, **kwargs):
                              ' approval!')
             return redirect('home')
         else:
-            add_board_form = PostBaord
+            add_board_form = PostBoard
             messages.error(request, 'There was an error adding your' +
                            ' board, please try again!')
     context = {

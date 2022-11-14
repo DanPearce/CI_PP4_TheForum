@@ -1,7 +1,11 @@
 """
 View for the admin console for the contact app
 """
+# Imports
+# -----------------------------------------------------------------------
+# Third Party
 from django.contrib import admin
+# Internal
 from .models import Contact
 
 

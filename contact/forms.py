@@ -1,7 +1,11 @@
 """
 Forms used for the contact app.
 """
+# Imports
+# -----------------------------------------------------------------------
+# Third Party
 from django import forms
+# Internal
 from .models import Contact
 
 

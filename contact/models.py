@@ -1,6 +1,9 @@
 """
 Models for the contact app Structure
 """
+# Imports
+# -----------------------------------------------------------------------
+# Third Party
 from django.db import models
 
 

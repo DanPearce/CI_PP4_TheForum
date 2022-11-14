@@ -1,11 +1,16 @@
 """
 Views for the contact app
 """
+# Imports
+# -----------------------------------------------------------------------
+# Python Standard
 import os
+# Third Party
 from django.core.mail import send_mail
 from django.contrib import messages
 from django.shortcuts import render, redirect
 from django.template.loader import render_to_string
+# Internal
 from .forms import ContactForm
 
 
