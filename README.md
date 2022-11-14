@@ -46,14 +46,32 @@ Users are able to create their own ForumPost, comment on any post, and create th
 10. [Acknowledgements](#acknowledgements)
 
 ## Application Goals and User Experience
+
 ### User Goals
+- Easily navigate thoughout the website with ease.
+- Easily distinguish if logged in, use the site in all states.
+- Use theforum to create content and discussions.
+- Get in touch with the administrative team, regarding reporting a post or anything else.
+
 ### Owner Goals
+- Provide the user feedback while using the site.
+- Provide the user and experience that is responsive.
+- Provide the user with a point of contact for submitting a report or getting in touch in general.
+
 ### Target Audience
+- Lovers of debates/conversations about any topic they wish to talk about.
+- Users that would like to catch up on the latest news.
+- People who like to voice their opinion.
+
 ### User Expectations
-### User Manual
+- Experience use of the site on all devices, with a fully responsive experience.
+- While navigating throughout the site, always able to understand where they are and how to get back.
+- An interactive and engaging user interface that is easy to use.
+- All links to be fully functioning and working throughout the site.
 
 ## User Stories
 ### User
+
 ### Owner
 
 ## Design
