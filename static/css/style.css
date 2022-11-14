@@ -1,7 +1,9 @@
 /*Google Fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&family=Overpass:wght@600;700&display=swap');
 
-/*Styling for all pages*/
+/*-------------------
+Styling for all pages
+-------------------*/
 *, *::before, *, *::after {
     box-sizing: border-box;
 }
@@ -178,9 +180,9 @@ a:hover {
     color: #fefdfd;
 }
 
-/*
+/*-----------------------------
 All Authorisation Pages STYLING
-*/
+-----------------------------*/
 .auth {
     margin-top: 5vh;
     text-align: center;
@@ -279,7 +281,6 @@ h6 {
 }
 
 /*Top Stories*/
-
 .news {
     display: flex;
     justify-content: center;
@@ -477,7 +478,6 @@ h6 {
 /*-------------------------
 'board_detail.html' STYLING
 -------------------------*/
-
 .board-posts {
     margin: 10px;
 }
@@ -630,7 +630,6 @@ h6 {
     background: none;
     border: none;
 }
-
 
 /* Comment Section */
 .post-comment {
@@ -822,7 +821,6 @@ h6 {
 /*--------------------
 'contact.html' STYLING
 --------------------*/
-
 #contact {
     margin: 10px;
 }
@@ -836,7 +834,6 @@ h6 {
 /*---------------
 All Media Queries
 ---------------*/
-
 @media only screen and (max-width: 900px) {
     .news-4 {
         display: none;
