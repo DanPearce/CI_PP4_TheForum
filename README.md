@@ -71,8 +71,46 @@ Users are able to create their own ForumPost, comment on any post, and create th
 
 ## User Stories
 ### User
+1. Trending Home Page
+    - As a Consumer I can view a list of trending posts so that I can select the one I’d prefer to read.
+2. Categorisation of Posts
+    - As a Consumer, I can view, and navigate through different Forum Boards and posts, so that I can find the topics/hobbies that I’d like to read.
+3. Likes on a Post
+    - As a Consumer, I can view the number of likes a post has received, so that I can clearly see which post is the most popular.
+4. Opening a Post
+    - As a Consumer, I can open a post so that I can read its contents.
+5. Viewing Comments
+    - As a Consumer, I can see the comments on a post, so that I can gather other’s opinions on the topic. 
+6. Account Creation
+    - As a Consumer, I can create an account, so that I can use more features of the site.
+7. Liking of Posts
+    - As a Consumer I can like existing posts, so that I can help to increase its popularity/trending status.
+8. Editing Posts
+    - As a Consumer, I can make changes to my existing posts, so that I can rectify any errors I may have made while creating the original post.
+9. Deleting Posts
+    - As a Consumer, I can delete any of my existing posts, so that I can chose to take said post down for whatever reason.
+10. Creating a Board
+    - As a Consumer, I can create a Forum Board, so that I can create a sub-community for said topic/hobby.
+11. Following Boards
+    - As a Consumer, I can follow a Forum Board, so that I can help to increase its popularity/trending status.
+12. Creating a Post
+    - As a Consumer, I can create a post, so that I can engage and start a conversation with my chosen Forum Board.
+13. Commenting on Posts
+    - As a Consumer, I can comment on existing posts, so that I can add my input to an existing post/conversation.
+14. Reporting Posts
+    - As a Consumer, I can report a post, so that I can help to keep the community a safe place.
+15. Contact Us
+    - As a Consumer, I can get in touch with the administrative team, so that I can make suggestions or submit bugs.
 
 ### Owner
+16. Admin Moderator
+    - As an Admin/Owner, I can create, read, edit, like, and delete existing boards, posts, and comments, so that I can manage the content posted on the site.
+17. Responsive Site
+    - As an Owner, I can provide a fully responsive experience, so that my users can visit the website on any device they wish.
+18. User Feedback
+    - As an Owner, I can to provide my users with feedback, so that they can distinguish if their action was successful. 
+19. Content Control
+    - As and Owner, I can ensure only users with accounts to be able to create content, so that some form of moderation can be used if needed. 
 
 ## Design
 ### Structure
