@@ -11,7 +11,7 @@
     {% include 'board_header.html' %}
 </section>
 <div class="go-back">
-    <a href="{% url 'home' %}"><i class="fa-solid fa-house-chimney"></i></a>
+    <a href="{% url 'home' %}"><i class="fa-solid fa-house-chimney"></i> Home</a>
     <a href="{% url 'board_detail' board.slug %}">{{ board.name }}</a>
 </div>
 <section id="board-detail" class="row">
@@ -28,27 +28,26 @@
 					</div> 
 				{% else %}
 					{% for post in page.object_list %}
-						<a href="{% url 'post_detail' post.slug  %}">
-							<div class="board-detail-posts">
-								<a href="{% url 'post_detail' post.slug  %}">
-								<div class="board-detail-post-title-likes">
-									{{ post.post_title }}
-									<div class="board-post-detail-likes">
-										<i class="fa-solid fa-map-pin"></i>
-										{{ post.likes.count }}
-									</div>
+					<div class="link-container board-detail-posts">
+						<a href="{% url 'post_detail' post.slug  %}">								
+							<div class="board-detail-post-title-likes">
+								{{ post.post_title }}
+								<div class="board-post-detail-likes">
+									<i class="fa-solid fa-map-pin"></i>
+									{{ post.likes.count }}
 								</div>
-								<div class="board-detail-post-image-container">
-									<img src="{{ post.featured_image.url }}" class="board-post-image">
-								</div>
-								<div class="board-detail-exceprt-creator-created">
-									{{ post.excerpt }}
-									<div class="board-detail-creator-created">
-										{{ post.creator }} {{ post.created_on }}
-									</div>
+							</div>
+							<div class="board-detail-post-image-container">
+								<img src="{{ post.featured_image.url }}" class="board-post-image" alt="Image relating to {{ post.post_title }}">
+							</div>
+							<div class="board-detail-exceprt-creator-created">
+								{{ post.excerpt }}
+								<div class="board-detail-creator-created">
+									{{ post.creator }} {{ post.created_on }}
 								</div>
 							</div>
 						</a>
+					</div>
 					{% endfor %}
 					<div class="page-scroll">
 						{% if page.has_previous %}

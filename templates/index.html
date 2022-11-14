@@ -25,7 +25,6 @@
                     <div class="col-sm-3 top-stories text-wrap {% cycle 'news-1' 'news-2' 'news-3' 'news-4'%}">
                         <img src="{{ article.urlToImage }}" alt="This image relates to {{ article.title }}">
                         <a href="{{ article.url }}" target="_blank" class="text-wrap" aria-label="Visit the news article site, releated to latest headline {{ article.title }}"><span class="article-title">{{ article.title }}</span></a>
-                        </a>
                     </div>
                 {% endif %}
             {% endfor %}
