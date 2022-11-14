@@ -3,7 +3,7 @@ Developed by, [Dan Pearce](https://danpearce.software/)
 
 [View the live application](https://ci-pp4-theforum-danpearce.herokuapp.com/)
 
-<!--![Screen Capture]()-->
+![Screen Capture](media/responsive/home-responsive.png)
 
 theforum is exacty what it says it is on the tin, a website designed for any and whatever topics our users would like to discuss! The site is deliberately left as a broad discussion board, to attract just about anyone who has something to say.
 

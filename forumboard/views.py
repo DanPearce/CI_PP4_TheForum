@@ -95,6 +95,8 @@ class PostDetail(View):
             comment_form = CommentForm
         else:
             comment_form = CommentForm
+            messages.error(request, 'There was an error sending your' +
+                           ' comment, please try again!')
 
         context = {
             'post': post,
@@ -152,6 +154,10 @@ def add_post(request, name, *args, **kwargs):
             post.save()
             messages.success(request, 'Post added successfully!')
             return redirect(reverse('board_detail', args=[board.name.lower()]))
+        else:
+            add_post_form = PostForm
+            messages.error(request, 'There was an error adding your' +
+                            ' post, please try again!')
     context = {
         'add_post_form': add_post_form,
         'forum_board': board,
@@ -192,6 +198,10 @@ def add_board(request, *args, **kwargs):
             messages.success(request, 'Thank you, Your board is awaiting' +
                              ' approval!')
             return redirect('home')
+        else:
+            add_board_form = PostBaord
+            messages.error(request, 'There was an error adding your' +
+                           ' board, please try again!')
     context = {
         'add_board_form': add_board_form,
     }
@@ -266,6 +276,10 @@ class EditPost(View):
                 edit_post_form.save()
                 messages.success(request, 'Your post has successfully been' +
                                  ' edited!')
+            else:
+                edit_post_form = PostForm(request.POST, instance=post)
+                messages.error(request, 'There was an error editing your' +
+                               ' post, please try again!')
         return redirect('home')
 
 
@@ -280,5 +294,8 @@ def delete_post(request, id, *args, **kwargs):
     if request.user == post.creator:
         post.delete()
         messages.success(request, 'Your post has successfully been deleted!')
+    else:
+        messages.error(request, 'There was an error deleting your' +
+                       ' post, please try again!')
 
     return redirect('home')

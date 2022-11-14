@@ -37,6 +37,10 @@ def contact(request):
             messages.success(request, 'Your message has been successfully' +
                              ' sent!')
             return redirect('home')
+        else:
+            contact_form = ContactForm()
+            messages.error(request, 'There was an error sending your' +
+                           ' message, please try again!')
     else:
         contact_form = ContactForm()
         context = {
