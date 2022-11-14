@@ -1,31 +1,32 @@
+<!--Top Posts Section-->
 <div class="row container-fluid latest-posts">
     <h6>Top Posts</h6>
     <hr class="my-4">
     {% for post in page.object_list %}
-    <a href="{% url 'post_detail' post.slug  %}">
-        <div class="index-forum-post row">
-            <div class="col-12">
-                    <div class="row user-likes">
-                        <div class="col-11">
-                            <div class="index-forumboard-post">
-                                Posted on {{ post.forum_board }} by {{ post.creator }}
+        <a href="{% url 'post_detail' post.slug  %}">
+            <div class="index-forum-post row">
+                <div class="col-12">
+                        <div class="row user-likes">
+                            <div class="col-11">
+                                <div class="index-forumboard-post">
+                                    Posted on {{ post.forum_board }} by {{ post.creator }}
+                                </div>
+                            </div>
+                            <div class="col-1 likes-col">
+                                <span class="likes">
+                                    <i class="fa-solid fa-map-pin"></i>
+                                <span class="post-like-count">{{ post.likes.count }}</span>
                             </div>
                         </div>
-                        <div class="col-1 likes-col">
-                            <span class="likes">
-                                <i class="fa-solid fa-map-pin"></i>
-                            <span class="post-like-count">{{ post.likes.count }}</span>
+                        <div class="post-title">
+                            {{ post.post_title }}
                         </div>
-                    </div>
-                    <div class="post-title">
-                        {{ post.post_title }}
-                    </div>
-                    <div class="index-img-container">
-                        <span><img class="index-forum-post-img" src="{{ post.featured_image.url }}"></span>
-                    </div>
+                        <div class="index-img-container">
+                            <span><img class="index-forum-post-img" src="{{ post.featured_image.url }}"></span>
+                        </div>
+                </div>
             </div>
-        </div>
-    </a>
+        </a>
     {% endfor %}
     <div class="page-scroll">
         {% if page.has_previous %}

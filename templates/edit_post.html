@@ -1,3 +1,4 @@
+<!--Edit Post Template-->
 {% extends 'base.html' %}
 {% block content %}
 {% load crispy_forms_tags %}
@@ -10,13 +11,13 @@
         <h6>Edit your Post:</h6>
         <hr class="my-4">
         {% if user.is_authenticated %}
-        <div class="add-post-form">
-            <form method="post" id="post-form" enctype="multipart/form-data">
-                {{ edit_post_form | crispy }}
-                {% csrf_token %}
-                <button type="submit" class="btn btn-dark btn-sm sign-up-btn add-post-form-btn">Make Changes</button>
-            </form>
-        </div>
+            <div class="add-post-form">
+                <form method="post" id="post-form" enctype="multipart/form-data">
+                    {{ edit_post_form | crispy }}
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-dark btn-sm sign-up-btn add-post-form-btn">Make Changes</button>
+                </form>
+            </div>
         {% else %}
         {% endif %}
     </div>

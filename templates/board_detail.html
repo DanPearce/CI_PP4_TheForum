@@ -1,10 +1,11 @@
+<!--Board Detail Template-->
 {% extends 'base.html' %}
 {% block content %}
 {% for message in messages %}
-<div class="alert {{ message.tags }} alert-dismissible">
-	{{ message }}
-	<a href="#" class="close" data-bs-dismiss="alert" aria-label="close">&times;</a>
-</div>
+	<div class="alert {{ message.tags }} alert-dismissible">
+		{{ message }}
+		<a href="#" class="close" data-bs-dismiss="alert" aria-label="close">&times;</a>
+	</div>
 {% endfor %}
 <section id="board-header" class="row">
     {% include 'board_header.html' %}

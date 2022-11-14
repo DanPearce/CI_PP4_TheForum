@@ -1,3 +1,4 @@
+<!--Index Page-->
 {% extends 'base.html' %}
 {% block content %}
 <div id="home" class="row">
@@ -9,12 +10,12 @@
             </div>
         {% endfor %}
         {% if not user.is_authenticated %}
-        <div class="jumbotron text-center zero-left-padding">
-            <h1 class="display-4">Welcome to theforum</h1>
-            <p class="lead">Start the conversation today.</p>                    
-            <p>Join the community and start sharing your thoughts.</p>
-            <a class="btn btn-dark btn-lg sign-up-btn" href="{% url 'account_signup' %}" role="button">Sign Up</a>
-        </div>
+            <div class="jumbotron text-center zero-left-padding">
+                <h1 class="display-4">Welcome to theforum</h1>
+                <p class="lead">Start the conversation today.</p>                    
+                <p>Join the community and start sharing your thoughts.</p>
+                <a class="btn btn-dark btn-lg sign-up-btn" href="{% url 'account_signup' %}" role="button">Sign Up</a>
+            </div>
         {% endif %}
         <div class="row container-fluid news">
             <h6>Trending News</h6>

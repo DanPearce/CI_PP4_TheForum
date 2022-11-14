@@ -1,3 +1,4 @@
+<!--Base HTML Template-->
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -8,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="theforum, start the conversation today">
     <meta name="keywords" content="the, forum, news, blog, conversation">
-    <!--Stylesheets, Bootstrap, Font Awesome & Favicon-->
+    <!--Stylesheet, Bootstrap, Font Awesome & Favicon-->
     <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/3f4aafba5f.js" crossorigin="anonymous"></script>
@@ -17,7 +18,7 @@
 </head>
 <body class="d-flex flex-column min-vh-100">
     <header>
-        <!--Logo & Navbar with collapsible functionality-->
+        <!--Logo & Navbar with Collapsible Functionality-->
         <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="{% url 'home' %}"><span class="logo"><strong><span class="the">the</span><span class="forum">forum</span></strong></span></a>
@@ -48,9 +49,10 @@
     </header>
     <main class="container-fluid flex-shrink-0" id="main">
     {% block content %}
-    <!--Block Content from additional templates lives here-->
+    <!--Block Content from Additional Templates will insert here.-->
     {% endblock content %}
     </main>
+    <!--Footer-->
     <footer class="footer mt-auto">
         <ul class="socials text-center m-0">
             <li>

@@ -1,11 +1,12 @@
+<!--Add Board Page-->
 {% extends 'base.html' %}
 {% block content %}
 {% load crispy_forms_tags %}
 {% for message in messages %}
-<div class="alert {{ message.tags }} alert-dismissible">
-    {{ message }}
-    <a href="#" class="close" data-bs-dismiss="alert" aria-label="close">&times;</a>
-</div>
+    <div class="alert {{ message.tags }} alert-dismissible">
+        {{ message }}
+        <a href="#" class="close" data-bs-dismiss="alert" aria-label="close">&times;</a>
+    </div>
 {% endfor %}
 <div class="go-back">
     <a href="javascript:history.back()"><i class="fa-solid fa-arrow-left"></i> Go back</a>
@@ -16,26 +17,26 @@
             <h6>Add a Board:</h6>
             <hr class="my-4">
             {% if user.is_authenticated %}
-            <div class="add-board-form">
-                <form method="POST" id="board-form" enctype="multipart/form-data">
-                    {{ add_board_form | crispy }}
-                    {% csrf_token %}
-                    <button type="submit" class="btn btn-dark btn-sm sign-up-btn add-board-form-btn">Add Board</button>
-                </form>
-            </div>
+                <div class="add-board-form">
+                    <form method="POST" id="board-form" enctype="multipart/form-data">
+                        {{ add_board_form | crispy }}
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-dark btn-sm sign-up-btn add-board-form-btn">Add Board</button>
+                    </form>
+                </div>
             {% else %}
-            <div class="alert alert-danger alert-dismissible">
-                You must have an account, or be signed in to add a Board!
-                <a href="#" class="close" data-bs-dismiss="alert" aria-label="close">&times;</a>
-            </div>
-            <div class="col-12">
-                <div class="row container-fluid board-form-no-auth">
-                    <h5>Sign in/up add a new board:</h5>
-                    <div class="comment-form">
-                        <a href="{% url 'account_login' %}" class="btn btn-dark btn-lg sign-up-btn comment-btn">Sign in</a>
-                        <a href="{% url 'account_signup' %}" class="btn btn-dark btn-lg sign-up-btn comment-btn">Sign up</a>
+                <div class="alert alert-danger alert-dismissible">
+                    You must have an account, or be signed in to add a Board!
+                    <a href="#" class="close" data-bs-dismiss="alert" aria-label="close">&times;</a>
+                </div>
+                <div class="col-12">
+                    <div class="row container-fluid board-form-no-auth">
+                        <h5>Sign in/up add a new board:</h5>
+                        <div class="comment-form">
+                            <a href="{% url 'account_login' %}" class="btn btn-dark btn-lg sign-up-btn comment-btn">Sign in</a>
+                            <a href="{% url 'account_signup' %}" class="btn btn-dark btn-lg sign-up-btn comment-btn">Sign up</a>
+                        </div>
                     </div>
                 </div>
-            </div>
             {% endif %}
 {% endblock %}
