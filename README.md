@@ -236,6 +236,168 @@ Please find the colours in the pallete below, created by using [Coolors.co](http
 </details>
 
 ## Main Features
+The features of this website are combined to create an interactive user experience that engages the audience to create their own content and to interact with others.
+
+### Trending Home Page
+When a user logs onto the home page of the forum, regardless of if they have an account or not, they are met with the latest news provided from [NewsAPI](https://newsapi.org/), met with the most popular posts on the site and are also able to navigate to the most followed boards of the site.
+
+The structure of the site has been made to make the home page the place to view the most popular information.
+
+- User Story Testing: 1, 3, 7, 11
+
+<details><summary>Trending Home Page</summary>
+<img src="docs/features/feature-trending-home-page.png">
+</details>
+<details><summary>Top Stories</summary>
+<img src="docs/features/feature-top-stories.png">
+</details>
+<details><summary>Top Posts</summary>
+<img src="docs/features/feature-top-posts.png">
+</details>
+<details><summary>Top Boards</summary>
+<img src="docs/features/feature-top-boards.png">
+</details>
+
+### Forum Boards
+
+- User Story Testing: 2, 3
+
+<details><summary>All Forum Boards</summary>
+<img src="docs/features/feature-forum-board.png">
+</details>
+<details><summary>Forum Board Detail</summary>
+<img src="docs/features/feature-board-detail.png">
+</details>
+
+### Account Creation
+
+- User Story Testing: 6
+
+<details><summary>Account Creation</summary>
+<img src="docs/features/feature-create-account.png">
+</details>
+
+### Creation of Posts and Boards
+
+- User Story Testing: 10, 12
+
+<details><summary>Add Board</summary>
+<img src="docs/features/feature-create-board-1.png">
+</details>
+<details><summary>Add Board(2)</summary>
+<img src="docs/features/feature-create-board-2.png">
+</details>
+<details><summary>Add Post</summary>
+<img src="docs/features/feature-add-post-1.png">
+</details>
+<details><summary>Add Post(2)</summary>
+<img src="docs/features/feature-add-post-2.png">
+</details>
+
+### Post Modification
+
+- User Story Testing: 8, 9
+
+<details><summary>Edit Post</summary>
+<img src="docs/features/feature-edit-post-1.png">
+</details>
+<details><summary>Edit Post(2)</summary>
+<img src="docs/features/feature-edit-post-2.png">
+</details>
+<details><summary>Delete Post</summary>
+<img src="docs/features/feature-delete-post-1.png">
+</details>
+<details><summary>Delete Post(2)</summary>
+<img src="docs/features/feature-delete-post-2.png">
+</details>
+
+### Interactivity with Posts & Boards
+
+- User Story Testing: 3, 4, 5, 7, 11, 13
+
+<details><summary>Post Detail</summary>
+<img src="docs/features/feature-post-detail.png">
+</details>
+<details><summary>Add Comment</summary>
+<img src="docs/features/feature-add-comment.png">
+</details>
+<details><summary>View Comments</summary>
+<img src="docs/features/feature-view-comment.png">
+</details>
+<details><summary>Liking Post</summary>
+<img src="docs/features/feature-liking-posts.png">
+</details>
+<details><summary>Viewing Post Like</summary>
+<img src="docs/features/feature-likes-1.png">
+</details>
+<details><summary>Viewing Post Like(2)</summary>
+<img src="docs/features/feature-likes-2.png">
+</details>
+<details><summary>Follow Board</summary>
+<img src="docs/features/feature-follow-board-1.png">
+</details>
+<details><summary>Follow Board(2)</summary>
+<img src="docs/features/feature-follow-board-2.png">
+</details>
+
+### Getting in Touch
+
+- User Story Testing: 14, 15
+
+<details><summary>Report Post</summary>
+<img src="docs/features/feature-report-post.png">
+</details>
+<details><summary>Contact Us</summary>
+<img src="docs/features/feature-contact-us.png">
+</details>
+
+### Responsive Experience
+
+- User Story Testing: 17, 18
+
+<details><summary>Responsive Site</summary>
+<img src="docs/features/feature-responsive-site-1.png">
+</details>
+<details><summary>Responsive Site(2)</summary>
+<img src="docs/features/feature-responsive-site-2.png">
+</details>
+<details><summary>User Feedback</summary>
+<img src="docs/features/feature-user-feedback-1.png">
+</details>
+<details><summary>User Feedback(2)</summary>
+<img src="docs/features/feature-user-feedback-2.png">
+</details>
+
+### Content Control
+
+- User Story Testing: 19
+
+<details><summary>Content Control</summary>
+<img src="docs/features/feature-content-control-1.png">
+</details>
+<details><summary>Content Control(2)</summary>
+<img src="docs/features/feature-content-control-2.png">
+</details>
+<details><summary>Content Control(3)</summary>
+<img src="docs/features/feature-content-control-3.png">
+</details>
+<details><summary>Content Control(4)</summary>
+<img src="docs/features/feature-content-control-4.png">
+</details>
+
+### Administrative Control
+
+- User Story Testing: 16
+
+<details><summary>Administrative Control</summary>
+<img src="docs/features/feature-admin-1.png">
+</details>
+<details><summary>Administrative Control(2)</summary>
+<img src="docs/features/feature-admin-2.png">
+</details>
+<details><summary>Administrative Control(3)</summary>
+<img src="docs/features/feature-admin-3.png">
+</details>
 
 ## Technologies
 ### Languages
