@@ -29,9 +29,8 @@ Users are able to create their own ForumPost, comment on any post, and create th
 4. [Main Features](#main-features)
 5. [Technologies](#technologies)
     - [Languages](#languages)
-    - [Libraries](#libraries)
     - [APIs](#apis)
-    - [Frameworks and Other Technologies](#frameworks-and-other-technologies)
+    - [Libraries, Frameworks and Other Technologies](#libraries-frameworks-and-other-technologies)
 6. [Validation and Testing](#validation-and-testing)
     - [Python PEP8 Testing](#python-pep8-testing)
     - [HTML Validation](#html-validation)
@@ -155,7 +154,7 @@ The site sturcute is as followed:
 #### Database
 This project was built using a relational database allowing us to easily link aspects of the site with others.
 
-During development, I used SQLite DB which is the default database to use for Django - and for production Heroku Postgres has been used and all data migrated during the deployment. 
+During development, I used [DB SQLite which](https://www.sqlite.org/) which is the default database to use for Django - and for production [ElephantSQL](https://www.elephantsql.com/) has been used and all data migrated during the deployment. 
 
 <details><summary>Diagram</summary>
 <img src="docs/theforum/theforum-diagram.png">
@@ -230,21 +229,20 @@ The colours I have used provide the site with a clean and modern look - with the
 The colours have also been chosen to provide a memberable site to the end user, and I delibertaely went with a red colour as this site is least used amongst the social media platforms.
 
 Please find the colours in the pallete below, created by using [Coolors.co](https://coolors.co/)
-
 <details><summary>Palette</summary>
 <img src="docs/theforum/colour-palette.png">
 </details>
 
-## Main Features
+### Main Features
 The features of this website are combined to create an interactive user experience that engages the audience to create their own content and to interact with others.
 
-### Trending Home Page
+#### Trending Home Page
+
 When a user logs onto the home page of the forum, regardless of if they have an account or not, they are met with the latest news provided from [NewsAPI](https://newsapi.org/), met with the most popular posts on the site and are also able to navigate to the most followed boards of the site.
 
 The structure of the site has been made to make the home page the place to view the most popular information.
 
 - User Story Testing: 1, 3, 7, 11
-
 <details><summary>Trending Home Page</summary>
 <img src="docs/features/feature-trending-home-page.png">
 </details>
@@ -258,7 +256,8 @@ The structure of the site has been made to make the home page the place to view 
 <img src="docs/features/feature-top-boards.png">
 </details>
 
-### Forum Boards
+#### Forum Boards
+theforum features the ability to create and add ForumBoard's onto the site, this allows our users to create communities for any topic they wish - this also allows the site users to generate their own content.
 
 - User Story Testing: 2, 3
 
@@ -269,7 +268,8 @@ The structure of the site has been made to make the home page the place to view 
 <img src="docs/features/feature-board-detail.png">
 </details>
 
-### Account Creation
+#### Account Creation
+Django All Auth has been used to allow the creation of user accounts, this allows us to allow users who do have an account to access more features of the site, such as creating a post.
 
 - User Story Testing: 6
 
@@ -277,7 +277,10 @@ The structure of the site has been made to make the home page the place to view 
 <img src="docs/features/feature-create-account.png">
 </details>
 
-### Creation of Posts and Boards
+#### Creation of Posts and Boards
+theforum sets out to allow its users to create its own content, our users are able to create a ForumBoard and as soon as this has been approved this will be live on the site for all to interact with.
+
+Users are also able to comment on any post they'd like as long as they have an account, this promotes discussion on the site.
 
 - User Story Testing: 10, 12
 
@@ -294,7 +297,8 @@ The structure of the site has been made to make the home page the place to view 
 <img src="docs/features/feature-add-post-2.png">
 </details>
 
-### Post Modification
+#### Post Modification
+I have implemented the ability for the creator of a post to edit/delete their own content. This allows the creator to have more control over their posts and make changes should they need to do so.
 
 - User Story Testing: 8, 9
 
@@ -311,10 +315,24 @@ The structure of the site has been made to make the home page the place to view 
 <img src="docs/features/feature-delete-post-2.png">
 </details>
 
-### Interactivity with Posts & Boards
+#### Interactivity with Posts & Boards
+All users with an account have the ability to interact with all Posts and Boards.
+
+##### Boards
+Users are able to open up each ForumBoard that has been approved by the administrator, and are able to view the latst ForumPosts that have been posted on that board. Each user is also able to 'follow' the board, moving its rank up on the home page's 'top boards' section.
+
+##### Posts
+Users are also able to open each Post that has been posted to any board, which will contain its title, creator, featured image, date of creation and also the main content of the post.
+
+They are also able to like each individul post from the post's detail page - this will move the posts popularity up on the home page. They can view the likes on the post in the top right hand corner of the post.
+
+Each post is also joined with its own set of comments that relate to the post, these are displayed below the main content for all to see. Users are also able to add a comment if they wish which will be displayed at the top in reverse posted order.
 
 - User Story Testing: 3, 4, 5, 7, 11, 13
 
+<details><summary>Forum Board Detail</summary>
+<img src="docs/features/feature-board-detail.png">
+</details>
 <details><summary>Post Detail</summary>
 <img src="docs/features/feature-post-detail.png">
 </details>
@@ -340,7 +358,8 @@ The structure of the site has been made to make the home page the place to view 
 <img src="docs/features/feature-follow-board-2.png">
 </details>
 
-### Getting in Touch
+#### Getting in Touch
+Users are able to get in touch with the site owner and administrators. They can click the 'Report Post' button underneath each indivodual post which will redirect them to the contact us page - where the user can describe their problem to the admins. The users are also able to press the contact us button at all times through the navigation menu, they can use this to report again or they can get in touch with any general questions too.
 
 - User Story Testing: 14, 15
 
@@ -351,7 +370,10 @@ The structure of the site has been made to make the home page the place to view 
 <img src="docs/features/feature-contact-us.png">
 </details>
 
-### Responsive Experience
+#### Responsive Experience
+The site is fully responsive and will change its appearance depending on the device that it is being viewed on. 
+
+The site also provides a responsive experience, by providing the users feedback based on their actions on the site.
 
 - User Story Testing: 17, 18
 
@@ -368,7 +390,8 @@ The structure of the site has been made to make the home page the place to view 
 <img src="docs/features/feature-user-feedback-2.png">
 </details>
 
-### Content Control
+#### Content Control
+theforum only allows users with an account to post onto the site, allowing moderation to be kept in place helping to keep the community a safe place for all.
 
 - User Story Testing: 19
 
@@ -385,7 +408,8 @@ The structure of the site has been made to make the home page the place to view 
 <img src="docs/features/feature-content-control-4.png">
 </details>
 
-### Administrative Control
+#### Administrative Control
+The administrative team are able to log onto their admin console, from here they are able to manage all user accounts, boards, posts and comments in order to keep the community safe.
 
 - User Story Testing: 16
 
@@ -400,10 +424,44 @@ The structure of the site has been made to make the home page the place to view 
 </details>
 
 ## Technologies
+
 ### Languages
-### Libraries
+- [HTML](https://en.wikipedia.org/wiki/HTML5)
+- [CSS](https://en.wikipedia.org/wiki/CSS)
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+- [Python](https://www.python.org/)
+- [Django](https://www.djangoproject.com/)
+
 ### APIs
-### Frameworks and Other Technologies
+I used [NewsAPI](https://newsapi.org/) within this project, which allows developers a free plan for personal projects. The use of this API can be found on the home page and provides us updated content for the 'top stories' section.
+
+### Libraries, Frameworks and Other Technologies
+- [Boostrap](https://getbootstrap.com/) - Used to enhance my CSS code.
+- [jQuery](https://jquery.com) - Used to make the use of my JavaScript code more simplified.
+- [Django](https://www.djangoproject.com) - Used to form the project, this project is mainly a Django based project - Many built in libraries have also been used to enhance the project.
+- [Git](https://git-scm.com/) - Used to implement version control within the project.
+- [GitHub](https://github.com/) Used to host my code.
+- [GitPod](https://www.gitpod.io/) Used to build my code online.
+- [VS Code](https://code.visualstudio.com) - Used occasionally to build the code offline.
+- [Heroku](https://dashboard.heroku.com/) - Used to host the live version of the site.
+- [DB SQLite](https://www.sqlite.org/index.html) - Used to create the database on the development version of the site.
+- [ElephantSQL](https://www.elephantsql.com/) - Used to host the database for the live site.
+- [Font Awesome](https://fontawesome.com/) - Used for the icons shown on the site.
+- [Balsamiq](https://balsamiq.com/) - Used to create the Wireframes for the site.
+- [Lucid Chart](https://www.lucidchart.com/) - Used to create the diagrams used for the models.
+- [Google Chrome Developer Tools](https://developers.google.com/web/tools/chrome-devtools) - Used for day-to-day testing and configuration of the site.
+- [Google Fonts](https://fonts.google.com/) - Used for the two fonts featured on the site [Fonts](#fonts).
+- [Favicon.io](https://favicon.io/) - Used to create the favicon featured on the site.
+- [Am I Responsive? - ui.dev](https://ui.dev/amiresponsive) - Used to create the responsive images for the site.
+- [Cloudinary](https://cloudinary.com/) - Used to host the images used on the live site.
+- [Summernote](https://summernote.org/) - Used to enhance some text fields on the site.
+- Validation:
+    - [WC3 Markup Validation Serivce](https://validator.w3.org/) - Used to validate the HTML.
+    - [W3C Jigsaw Validation Service](https://jigsaw.w3.org/css-validator/) - Used to validate the CSS.
+    - [JSHint](JSHint) - Used to validate the JS.
+    - [PyCodeStyle](https://pypi.org/project/pycodestyle/) - Used to validate the Python code.
+    - [WAVE - Web Accessibility Evaluation Tool](https://wave.webaim.org/) - Use to ensure the site is accessibile to all.
+    - [Lighthouse](https://developers.google.com/web/tools/lighthouse) - Used to check performance of the site.
 
 ## Validation and Testing
 ### Python PEP8 Testing
