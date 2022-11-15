@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load crispy_forms_tags %}
+<section id="contact" class="row">
+<div class="row container-fluid add-posts">
+    <div class="col-12">
+        <p>Oops! somthing went wrong!</p>
+        <a href="{% url 'home' %}" class="btn btn-dark btn-lg sign-up-btn comment-btn">Take me Home!</a>
+    </div>
+</div>
+</section>
+{% endblock %}
