@@ -5,7 +5,7 @@ URLs for forumboard
 # -----------------------------------------------------------------------
 # Third Party
 from django.urls import path
-# Internal 
+# Internal
 from . import views
 
 urlpatterns = [
