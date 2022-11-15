@@ -464,12 +464,67 @@ I used [NewsAPI](https://newsapi.org/) within this project, which allows develop
     - [Lighthouse](https://developers.google.com/web/tools/lighthouse) - Used to check performance of the site.
 
 ## Validation and Testing
-### Python PEP8 Testing
+
+### PyCodeStyle Validation
+All Python Code has been checked using the [PyCodeStyle](https://pypi.org/project/pycodestyle/) library. All code has been returned with no errors.
+
+<details><summary>Contact</summary>
+<details><summary>admin.py</summary>
+<img src="docs/validation/pycodestyle/contact-admin.png">
+</details>
+<details><summary>apps.py</summary>
+<img src="docs/validation/pycodestyle/contact-apps.png">
+</details>
+<details><summary>forms.py</summary>
+<img src="docs/validation/pycodestyle/contact-forms.png">
+</details>
+<details><summary>models.py</summary>
+<img src="docs/validation/pycodestyle/contact-models.png">
+</details>
+<details><summary>tests.py</summary>
+<img src="docs/validation/pycodestyle/contact-tests.png">
+</details>
+<details><summary>urls.py</summary>
+<img src="docs/validation/pycodestyle/contact-urls.png">
+</details>
+<details><summary>views.py</summary>
+<img src="docs/validation/pycodestyle/contact-views.png">
+</details>
+</details>
+<details><summary>forumboard</summary>
+<details><summary>admin.py</summary>
+<img src="docs/validation/pycodestyle/forumboard-admin.png">
+</details>
+<details><summary>apps.py</summary>
+<img src="docs/validation/pycodestyle/forumboard-apps.png">
+</details>
+<details><summary>forms.py</summary>
+<img src="docs/validation/pycodestyle/forumboard-forms.png">
+</details>
+<details><summary>models.py</summary>
+<img src="docs/validation/pycodestyle/forumboard-models.png">
+</details>
+<details><summary>tests.py</summary>
+<img src="docs/validation/pycodestyle/forumboard-tests.png">
+</details>
+<details><summary>urls.py</summary>
+<img src="docs/validation/pycodestyle/forumboard-urls.png">
+</details>
+<details><summary>views.py</summary>
+<img src="docs/validation/pycodestyle/forumboard-views.png">
+</details>
+</details>
+
 ### HTML Validation
+
 ### CSS Validation
+
 ### Accessibility Validation
+
 ### Performance Validation
+
 ### Device and Browser Compatibility
+
 ### User Story Testing
 
 ## Bugs and Errors
