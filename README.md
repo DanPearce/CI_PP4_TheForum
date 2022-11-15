@@ -468,7 +468,6 @@ I used [NewsAPI](https://newsapi.org/) within this project, which allows develop
 ### PyCodeStyle Validation
 All Python Code has been checked using the [PyCodeStyle](https://pypi.org/project/pycodestyle/) library. All code has been returned with no errors.
 
-<details><summary>Contact</summary>
 <details><summary>admin.py</summary>
 <img src="docs/validation/pycodestyle/contact-admin.png">
 </details>
@@ -516,14 +515,145 @@ All Python Code has been checked using the [PyCodeStyle](https://pypi.org/projec
 </details>
 
 ### HTML Validation
+The HTML has been tested using the [W3C Markup Validation Service](https://validator.w3.org/) in order validate the correct function of this site. All pages have passed with no errors or warnings.
+
+<details><summary>add_board.html</summary>
+<img src="docs/validation/html/html-add-board-validation.png">
+</details>
+<details><summary>add_post.html</summary>
+<img src="docs/validation/html/html-add-post-validation.png">
+</details>
+<details><summary>all_boards.html</summary>
+<img src="docs/validation/html/html-all-boards-validation.png">
+</details>
+<details><summary>board_detail.html</summary>
+<img src="docs/validation/html/html-board-detail-validation.png">
+</details>
+<details><summary>contact.html</summary>
+<img src="docs/validation/html/html-contact-validation.png">
+</details>
+<details><summary>edit_post.html</summary>
+<img src="docs/validation/html/html-edit-post-validation.png">
+</details>
+<details><summary>index.html</summary>
+<img src="docs/validation/html/html-index-validation.png">
+</details>
+<details><summary>login.html</summary>
+<img src="docs/validation/html/html-login-validation.png">
+</details>
+<details><summary>logout.html</summary>
+<img src="docs/validation/html/html-logout-validation.png">
+</details>
+<details><summary>post_detail.html</summary>
+<img src="docs/validation/html/html-post-detail-validation.png">
+</details>
+<details><summary>signup.html</summary>
+<img src="docs/validation/html/html-signup-validation.png">
+</details>
 
 ### CSS Validation
+The [W3C Jigsaw Validation Service](https://jigsaw.w3.org/css-validator/) has been used to test the CSS of this website. The CSS has passed with no errors.
+
+<details><summary>style.css</summary>
+<img src="docs/validation/css/css-validation.png">
+</details>
+
+### JavaScript Validation
+[JSHint](https://jshint.com/) was used to test the JavaScript of this site and all js files have passed with no errors.
+
+<details><summary>script.js</summary>
+<img src="docs/validation/js/jshint-js-validation.png">
+</details>
 
 ### Accessibility Validation
+The [WAVE - Web Accessibility Evaluation Tool](https://wave.webaim.org/) was used to test the accessibility function of the website, all pages have passed with no errors. Some warnings are present, however this is due to header styling which has been done on purpose to fit the design.
+
+<details><summary>add_board.html</summary>
+<img src="docs/validation/wave/wave-add-board-validation.png">
+</details>
+<details><summary>add_post.html</summary>
+<img src="docs/validation/wave/wave-add-post-validation.png">
+</details>
+<details><summary>all_boards.html</summary>
+<img src="docs/validation/wave/wave-all-boards-validation.png">
+</details>
+<details><summary>board_detail.html</summary>
+<img src="docs/validation/wave/wave-board-detail-validation.png">
+</details>
+<details><summary>contact.html</summary>
+<img src="docs/validation/wave/wave-contact-validation.png">
+</details>
+<details><summary>edit_post.html</summary>
+<img src="docs/validation/wave/wave-edit-post-validation.png">
+</details>
+<details><summary>index.html</summary>
+<img src="docs/validation/wave/wave-index-validation.png">
+</details>
+<details><summary>login.html</summary>
+<img src="docs/validation/wave/wave-login-validation.png">
+</details>
+<details><summary>logout.html</summary>
+<img src="docs/validation/wave/wave-logout-validation.png">
+</details>
+<details><summary>post_detail.html</summary>
+<img src="docs/validation/wave/wave-post-detail-validation.png">
+</details>
+<details><summary>signup.html</summary>
+<img src="docs/validation/wave/wave-signup-validation.png">
+</details>
 
 ### Performance Validation
+[Lighthouse](https://developers.google.com/web/tools/lighthouse) in the Google Chrome Developer Tools was used to test the performance of the website and all pages have passed with a green score.
+
+<details><summary>add_board.html</summary>
+<img src="docs/validation/lighthouse/lighthouse-add-board-validation.png">
+</details>
+<details><summary>add_post.html</summary>
+<img src="docs/validation/lighthouse/lighthouse-add-post-validation.png">
+</details>
+<details><summary>all_boards.html</summary>
+<img src="docs/validation/lighthouse/lighthouse-all-boards-validation.png">
+</details>
+<details><summary>board_detail.html</summary>
+<img src="docs/validation/lighthouse/lighthouse-board-detail-validation.png">
+</details>
+<details><summary>contact.html</summary>
+<img src="docs/validation/lighthouse/lighthouse-contact-validation.png">
+</details>
+<details><summary>edit_post.html</summary>
+<img src="docs/validation/lighthouse/lighthouse-edit-post-validation.png">
+</details>
+<details><summary>index.html</summary>
+<img src="docs/validation/lighthouse/lighthouse-index-validation.png">
+</details>
+<details><summary>login.html</summary>
+<img src="docs/validation/lighthouse/lighthouse-login-validation.png">
+</details>
+<details><summary>logout.html</summary>
+<img src="docs/validation/lighthouse/lighthouse-logout-validation.png">
+</details>
+<details><summary>post_detail.html</summary>
+<img src="docs/validation/lighthouse/lighthouse-post-detail-validation.png">
+</details>
+<details><summary>signup.html</summary>
+<img src="docs/validation/lighthouse/lighthouse-signup-validation.png">
+</details>
 
 ### Device and Browser Compatibility
+The project has been tested on numerous devices all of which result with full functionality and no visual issues the devices I tested on were as followed:
+- MacBook Pro 16-inch 
+- Desktop PC with 32-inch screen.
+- iPhone 12 Pro
+- iPad Pro 11inch
+- Microsoft Surface Pro 3
+- This site was also tested on all default Google Chrome Developer Tool screen sizes.
+
+#### Browser Compatibility
+The project was tested and viewed on the following browsers with no errors:
+- [Google Chrome](https://en.wikipedia.org/wiki/Google_Chrome)
+- [Mozilla Firefox](https://en.wikipedia.org/wiki/Firefox)
+- [Microsoft Edge](https://en.wikipedia.org/wiki/Microsoft_Edge)
+- [Apple Safari](https://en.wikipedia.org/wiki/Safari_(web_browser))
 
 ### User Story Testing
 
