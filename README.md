@@ -656,6 +656,118 @@ The project was tested and viewed on the following browsers with no errors:
 - [Apple Safari](https://en.wikipedia.org/wiki/Safari_(web_browser))
 
 ### User Story Testing
+| **User Story 1** | **User Action** | **Desired Outcome** | **Actual Outcome** |
+|------------------|-----------------|---------------------|--------------------|
+| As a Consumer I can view a list of trending posts so that I can select the one I’d prefer to read. | User opens the site at the home page. | The user can view a list of posts, based on their popularity. | Works as intended. |
+| <details><summary></summary><img src="docs/user-stories/user-story-1.png"></details> | | | |
+
+| **User Story 2** | **User Action** | **Desired Outcome** | **Actual Outcome** |
+|------------------|-----------------|---------------------|--------------------|
+| As a Consumer, I can view, and navigate through different Forum Boards and posts, so that I can find the topics/hobbies that I’d like to read. | User uses the UI to find the content they wish. | The user can use the top boards to a board they resonate with, they can then search through its posts. | Works as intended. |
+| <details><summary></summary><img src="docs/user-stories/user-story-2-1.png"></details> | | | |
+| <details><summary></summary><img src="docs/user-stories/user-story-2-2.png"></details> | | | |
+
+| **User Story 3** | **User Action** | **Desired Outcome** | **Actual Outcome** |
+|------------------|-----------------|---------------------|--------------------|
+| As a Consumer, I can view the number of likes a post has received, so that I can clearly see which post is the most popular. | User navigates to any post, through any way possible. | The user is clearly able to see how many likes a post has recieved. | Works as intended. |
+| <details><summary></summary><img src="docs/user-stories/user-story-3-1.png"></details> | | | |
+| <details><summary></summary><img src="docs/user-stories/user-story-3-2.png"></details> | | | |
+
+| **User Story 4** | **User Action** | **Desired Outcome** | **Actual Outcome** |
+|------------------|-----------------|---------------------|--------------------|
+| As a Consumer, I can open a post so that I can read its contents. | The user clicks a post from any of the possible routes. | The post opens up fully and allows the user to read its full contents. | Works as intended. |
+| <details><summary></summary><img src="docs/user-stories/user-story-4.png"></details> | | | |
+
+| **User Story 5** | **User Action** | **Desired Outcome** | **Actual Outcome** |
+|------------------|-----------------|---------------------|--------------------|
+| As a Consumer, I can see the comments on a post, so that I can gather other’s opinions on the topic. | The user naviagtes to a post, and scrolls to the bottom of the page to view the 'Comments' section. | The comments on the post are clearly visbible to the user. | Works as intended. |
+| <details><summary></summary><img src="docs/user-stories/user-story-6.png"></details> | | | |
+
+| **User Story 6** | **User Action** | **Desired Outcome** | **Actual Outcome** |
+|------------------|-----------------|---------------------|--------------------|
+| As a Consumer, I can create an account, so that I can use more features of the site. | User naviagtes to the 'Sign Up' section in the Nav Bar, and clicks the link. | Easily sign up with no hassle, Once signed up the user can use more featues of the site. | Works as intended. | 
+| <details><summary></summary><img src="docs/user-stories/user-story-6.png"></details> | | | |
+
+| **User Story 7** | **User Action** | **Desired Outcome** | **Actual Outcome** |
+|------------------|-----------------|---------------------|--------------------|
+| As a Consumer I can like existing posts, so that I can help to increase its popularity/trending status. | User to navigate to the post's page, and then click the heart icon. | The post will climb in ranking on the home page. | Works as intended. |
+| <details><summary></summary><img src="docs/user-stories/user-story-7.png"></details> | | | |
+
+| **User Story 8** | **User Action** | **Desired Outcome** | **Actual Outcome** |
+|------------------|-----------------|---------------------|--------------------|
+| As a Consumer, I can make changes to my existing posts, so that I can rectify any errors I may have made while creating the original post. | User who created the post, clicks 'Edit Post' under the post's description, and clicks the link. | The user is then able to make the necessary adjustments and edits to the post. | Works as intended. |
+| <details><summary></summary><img src="docs/user-stories/user-story-8-1.png"></details> | | | |
+| <details><summary></summary><img src="docs/user-stories/user-story-8-2.png"></details> | | | |
+
+| **User Story 9** | **User Action** | **Desired Outcome** | **Actual Outcome** |
+|------------------|-----------------|---------------------|--------------------|
+| As a Consumer, I can delete any of my existing posts, so that I can chose to take said post down for whatever reason. | Creator of the post navigates to the 'Delete Post' button underneath the description, and clicks the link. | The user is prompted with a message to ensure they want to delete, after confirming the post is deleted. | Works as intended. |
+| <details><summary></summary><img src="docs/user-stories/user-story-9-1.png"></details> | | | |
+| <details><summary></summary><img src="docs/user-stories/user-story-9-2.png"></details> | | | |
+
+| **User Story 10** | **User Action** | **Desired Outcome** | **Actual Outcome** |
+|-------------------|-----------------|---------------------|--------------------|
+| As a Consumer, I can create a Forum Board, so that I can create a sub-community for said topic/hobby. | Users navigate to the 'Add Board' button on the home page, and clicks the link. | Users are presented with a form to fill in to create a board. | Works as intended. |
+| <details><summary></summary><img src="docs/user-stories/user-story-10-1.png"></details> | | | |
+| <details><summary></summary><img src="docs/user-stories/user-story-10-2.png"></details> | | | |
+
+| **User Story 11** | **User Action** | **Desired Outcome** | **Actual Outcome** |
+|-------------------|-----------------|---------------------|--------------------|
+| As a Consumer, I can follow a Forum Board, so that I can help to increase its popularity/trending status. | User clicks the follow icon. | The forum board increases by a follower, also moving it up on the top boards section. | Works as intended. |
+| <details><summary></summary><img src="docs/user-stories/user-story-11-1.png"></details> | | | |
+| <details><summary></summary><img src="docs/user-stories/user-story-11-2.png"></details> | | | |
+| <details><summary></summary><img src="docs/user-stories/user-story-11-3.png"></details> | | | |
+
+| **User Story 12** | **User Action** | **Desired Outcome** | **Actual Outcome** |
+|-------------------|-----------------|---------------------|--------------------|
+| As a Consumer, I can create a post, so that I can engage and start a conversation with my chosen Forum Board. | From the board detail page, the user navigates to the 'Add Post' section, and clicks the link. | The user is presented with a form to fill asking them for content to fill in about the post. | Works as intended. |
+| <details><summary></summary><img src="docs/user-stories/user-story-12-1.png"></details> | | | |
+| <details><summary></summary><img src="docs/user-stories/user-story-12-2.png"></details> | | | |
+
+| **User Story 13** | **User Action** | **Desired Outcome** | **Actual Outcome** |
+|-------------------|-----------------|---------------------|--------------------|
+| As a Consumer, I can comment on existing posts, so that I can add my input to an existing post/conversation. | User navigates to any post, scrolling down just under the post's description, they are able to add a 'Comment'. | The comment is displayed, showing engagement from the user. | Works as intended. |
+| <details><summary></summary><img src="docs/user-stories/user-story-13-1.png"></details> | | | |
+| <details><summary></summary><img src="docs/user-stories/user-story-13-2.png"></details> | | | |
+
+| **User Story 14** | **User Action** | **Desired Outcome** | **Actual Outcome** |
+|-------------------|-----------------|---------------------|--------------------|
+| As a Consumer, I can report a post, so that I can help to keep the community a safe place. | Navigate to the post they wish to report, under this they can select 'Report Post'. | The user is presented with a form to fill where they can make a complaint about a post. | Works as intended. |
+| <details><summary></summary><img src="docs/user-stories/user-story-14-1.png"></details> | | | |
+| <details><summary></summary><img src="docs/user-stories/user-story-14-2.png"></details> | | | |
+
+| **User Story 15** | **User Action** | **Desired Outcome** | **Actual Outcome** |
+|-------------------|-----------------|---------------------|--------------------|
+| As a Consumer, I can get in touch with the administrative team, so that I can make suggestions or submit bugs. | User navigates to the nav bar and clicks 'Contact Us' link. | User is brought to a form to which they can fill out to get in touch with the owner/admin. | Works as intended. |
+| <details><summary></summary><img src="docs/user-stories/user-story-15-1.png"></details> | | | |
+| <details><summary></summary><img src="docs/user-stories/user-story-15-2.png"></details> | | | |
+
+| **User Story 16** | **User Action** | **Desired Outcome** | **Actual Outcome** |
+|-------------------|-----------------|---------------------|--------------------|
+| As an Admin/Owner, I can create, read, edit, like, and delete existing boards, posts, and comments, so that I can manage the content posted on the site. | The administrator navigates to the 'admin' panel. | The admin is able to used the console to make changes, add or delete content as needed. | Works as intended. |
+| <details><summary></summary><img src="docs/user-stories/user-story-16-1.png"></details> | | | |
+| <details><summary></summary><img src="docs/user-stories/user-story-16-2.png"></details> | | | |
+| <details><summary></summary><img src="docs/user-stories/user-story-16-3.png"></details> | | | |
+
+| **User Story 17** | **User Action** | **Desired Outcome** | **Actual Outcome** |
+|-------------------|-----------------|---------------------|--------------------|
+| As an Owner, I can provide a fully responsive experience, so that my users can visit the website on any device they wish. | The user navigates to the site, on any page. | The site remains visible and usable regardless of where it is being viewed. | Works as intended. |
+| <details><summary></summary><img src="docs/user-stories/user-story-17-1.png"></details> | | | |
+| <details><summary></summary><img src="docs/user-stories/user-story-17-2.png"></details> | | | |
+
+| **User Story 18** | **User Action** | **Desired Outcome** | **Actual Outcome** |
+|-------------------|-----------------|---------------------|--------------------|
+| As an Owner, I can to provide my users with feedback, so that they can distinguish if their action was successful. | User creates some content, uses user authentication, or makes an error. | The user is prompted with a message to inform them of their action. | Works as intended. |
+| <details><summary></summary><img src="docs/user-stories/user-story-18-1.png"></details> | | | |
+| <details><summary></summary><img src="docs/user-stories/user-story-18-2.png"></details> | | | |
+| <details><summary></summary><img src="docs/user-stories/user-story-18-3.png"></details> | | | |
+
+| **User Story 19** | **User Action** | **Desired Outcome** | **Actual Outcome** |
+|-------------------|-----------------|---------------------|--------------------|
+| As and Owner, I can ensure only users with accounts to be able to create content, so that some form of moderation can be used if needed. | User navigates to any form of content creation page. | If the user is signed in they can continue, if they are not they are unable to do so and are prompted to sign in or sign up. | Works as intended. |
+| <details><summary></summary><img src="docs/user-stories/user-story-19-1.png"></details> | | | |
+| <details><summary></summary><img src="docs/user-stories/user-story-19-2.png"></details> | | | |
+| <details><summary></summary><img src="docs/user-stories/user-story-19-3.png"></details> | | | |
 
 ## Bugs and Errors
 | **Bug/Error** | **Resolution** |
