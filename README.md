@@ -658,6 +658,11 @@ The project was tested and viewed on the following browsers with no errors:
 ### User Story Testing
 
 ## Bugs and Errors
+| **Bug/Error** | **Resolution** |
+|---------------|----------------|
+| News Catcher API - Intially I wanted to use the News Catcher API to implement the top stories, however as I could not get an increased request rate this resulted in errors as the items could not be displayed after about 5 requests. | To resolve this issue I decided to move to NewsAPI.org which offered a much higher request rate per day for projects in developent |
+| HTML Code Initially wasn't validated due to mainly indenting errors and ending divs missing, there were also so images without an alt tag | Made the necessary adjustments by looking at the live source code and making the changes needed to ensure the document was validated. |
+| In my initial testing of edit_post I was unable to figure out how to edit an existing post and have this detail shown to the user | After some reasearch I figured out you must inlude 'instance' in the request in order to populate the fields |
 
 ## Deployment
 
