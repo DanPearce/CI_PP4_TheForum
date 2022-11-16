@@ -5,7 +5,7 @@ Developed by, [Dan Pearce](https://danpearce.software/)
 
 ![Screen Capture](docs/theforum/home-responsive.png)
 
-theforum is exacty what it says it is on the tin, a website designed for any and whatever topics our users would like to discuss! The site is deliberately left as a broad discussion board, to attract just about anyone who has something to say.
+theforum is exactly what it says it is on the tin, a website designed for any and whatever topics our users would like to discuss! The site is deliberately left as a broad discussion board, to attract just about anyone who has something to say.
 
 Users are able to create their own ForumPost, comment on any post, and create their own ForumBoard. This allows the users to have a free discussion on their chosen topic. 
 
@@ -17,7 +17,6 @@ Users are able to create their own ForumPost, comment on any post, and create th
     - [Owner Goals](#owner-goals)
     - [Target Audience](#target-audience)
     - [User Expectations](#user-expectations)
-    - [User Manual](#user-manual)
 2. [User Stories](#user-stories)
     - [User](#user)
     - [Owner](#owner)
@@ -32,7 +31,7 @@ Users are able to create their own ForumPost, comment on any post, and create th
     - [APIs](#apis)
     - [Libraries, Frameworks and Other Technologies](#libraries-frameworks-and-other-technologies)
 6. [Validation and Testing](#validation-and-testing)
-    - [Python PEP8 Testing](#python-pep8-testing)
+    - [PyCodeStyle Validation](#pycodestyle-validation)
     - [HTML Validation](#html-validation)
     - [CSS Validation](#css-validation)
     - [Accessibility Validation](#accessibility-validation)
@@ -47,7 +46,7 @@ Users are able to create their own ForumPost, comment on any post, and create th
 ## Application Goals and User Experience
 
 ### User Goals
-- Easily navigate thoughout the website with ease.
+- Easily navigate throughout the website with ease.
 - Easily distinguish if logged in, use the site in all states.
 - Use theforum to create content and discussions.
 - Get in touch with the administrative team, regarding reporting a post or anything else.
@@ -140,13 +139,13 @@ The site sturcute is as followed:
 - 'add_board.html'
     - Provides the user a form to which they can enter some content in order to submit a board for approval.
 - 'board_header.html'
-    - Provides all pages releting to the board in question, with header that includes the boards image and also the boards title.
+    - Provides all pages relating to the board in question, with header that includes the boards image and also the boards title.
 - 'post_detail.html'
     - Provides the key information from the database and displays the selected post's information to the user.
 - 'edit_post.html'
     - Provides the user who created the post a form to edit their existing post.
 - 'board_detail.html'
-    - Provides the key information from the database and displays the selected boards's information to the user.
+    - Provides the key information from the database and displays the selected boards' information to the user.
 - 'add_post.html'
     - Provides the user a form to which they can use to create a post on their selected board.
 
@@ -161,7 +160,7 @@ During development, I used [DB SQLite which](https://www.sqlite.org/) which is t
 </details>
 
 #### Models
-All models used/created in this project have been used to recreate the model strucure illustrated above.
+All models used/created in this project have been used to recreate the model structure illustrated above.
 
 1. ForumBoard
     - Fields (id, name, slug, created_on, about, board_background, followers, approved_board)
@@ -171,7 +170,7 @@ All models used/created in this project have been used to recreate the model str
 2. ForumPost
     - Fields (id, forum_board, post_title, slug, creator, featured_image, post_detail, excerpt, created_on, likes)
     - The ForumPost shares a Many to One relationship with ForumBoard
-    - The id of ForumPost shares with Comment a One to Many relationship as the the post can contain unlimited comments.
+    - The id of ForumPost shares with Comment a One to Many relationship as the post can contain unlimited comments.
     - likes shares a many to many field with all users, to allow us to count how many people are interested in the post.
     - creator shares a One to One relationship with the AllAuth User 
 
@@ -187,7 +186,7 @@ All models used/created in this project have been used to recreate the model str
 
 5. Contact
     - Fields (id, first_name, last_name, email, body, created_on)
-    - This is a stand alone model used to gather details from the contact form, as this doesn't require a user to be signed in this doens't have any relations. 
+    - This is a stand alone model used to gather details from the contact form, as this doesn't require a user to be signed in this doesn't have any relations. 
 
 ### Wireframes
 <details><summary>base</summary>
@@ -216,7 +215,7 @@ All models used/created in this project have been used to recreate the model str
 #### Fonts
 The main font used throughout the website is [Overpass](https://fonts.google.com/specimen/Overpass), I chose this whilst designing the logo. As I wanted to use a font that felt natural and joined the words 'theforum' easily, I landed on this font as I felt this was achieved.
 
-The other font used is [Nunito](https://fonts.google.com/specimen/Nunito) and this is simply to make the footer fonts stand out and be seperated from the main site. 
+The other font used is [Nunito](https://fonts.google.com/specimen/Nunito) and this is simply to make the footer fonts stand out and be separated from the main site. 
 
 #### Icons
 I used [favicon.io](https://favicon.io/) to create the favicon icons for the site.
@@ -224,11 +223,11 @@ I used [favicon.io](https://favicon.io/) to create the favicon icons for the sit
 Icons from [Font Awesome](https://fontawesome.com/) we're also used throughout the site.
 
 ### Colour
-The colours I have used provide the site with a clean and modern look - with the use of colours that deliberatly contrast in order to make the site stand apart from its peers and to also ensure that the site is easily viewable by all.
+The colours I have used provide the site with a clean and modern look - with the use of colours that deliberately contrast in order to make the site stand apart from its peers and to also ensure that the site is easily viewable by all.
 
-The colours have also been chosen to provide a memberable site to the end user, and I delibertaely went with a red colour as this site is least used amongst the social media platforms.
+The colours have also been chosen to provide a memorable site to the end user, and I deliberately went with a red colour as this site is least used amongst the social media platforms.
 
-Please find the colours in the pallete below, created by using [Coolors.co](https://coolors.co/)
+Please find the colours in the palette below, created by using [Coolors.co](https://coolors.co/)
 <details><summary>Palette</summary>
 <img src="docs/theforum/colour-palette.png">
 </details>
@@ -319,12 +318,12 @@ I have implemented the ability for the creator of a post to edit/delete their ow
 All users with an account have the ability to interact with all Posts and Boards.
 
 ##### Boards
-Users are able to open up each ForumBoard that has been approved by the administrator, and are able to view the latst ForumPosts that have been posted on that board. Each user is also able to 'follow' the board, moving its rank up on the home page's 'top boards' section.
+Users are able to open up each ForumBoard that has been approved by the administrator, and are able to view the latest ForumPosts that have been posted on that board. Each user is also able to 'follow' the board, moving its rank up on the home page's 'top boards' section.
 
 ##### Posts
 Users are also able to open each Post that has been posted to any board, which will contain its title, creator, featured image, date of creation and also the main content of the post.
 
-They are also able to like each individul post from the post's detail page - this will move the posts popularity up on the home page. They can view the likes on the post in the top right hand corner of the post.
+They are also able to like each individual post from the post's detail page - this will move the posts popularity up on the home page. They can view the likes on the post in the top right hand corner of the post.
 
 Each post is also joined with its own set of comments that relate to the post, these are displayed below the main content for all to see. Users are also able to add a comment if they wish which will be displayed at the top in reverse posted order.
 
@@ -359,7 +358,7 @@ Each post is also joined with its own set of comments that relate to the post, t
 </details>
 
 #### Getting in Touch
-Users are able to get in touch with the site owner and administrators. They can click the 'Report Post' button underneath each indivodual post which will redirect them to the contact us page - where the user can describe their problem to the admins. The users are also able to press the contact us button at all times through the navigation menu, they can use this to report again or they can get in touch with any general questions too.
+Users are able to get in touch with the site owner and administrators. They can click the 'Report Post' button underneath each individual post which will redirect them to the contact us page - where the user can describe their problem to the admins. The users are also able to press the contact us button at all times through the navigation menu, they can use this to report again, or they can get in touch with any general questions too.
 
 - User Story Testing: 14, 15
 
@@ -463,6 +462,8 @@ I used [NewsAPI](https://newsapi.org/) within this project, which allows develop
     - [PyCodeStyle](https://pypi.org/project/pycodestyle/) - Used to validate the Python code.
     - [WAVE - Web Accessibility Evaluation Tool](https://wave.webaim.org/) - Use to ensure the site is accessibile to all.
     - [Lighthouse](https://developers.google.com/web/tools/lighthouse) - Used to check performance of the site.
+
+#### [Back to Top](#contents)
 
 ## Validation and Testing
 
@@ -660,122 +661,122 @@ The project was tested and viewed on the following browsers with no errors:
 | **User Story 1** | **User Action** | **Desired Outcome** | **Actual Outcome** |
 |------------------|-----------------|---------------------|--------------------|
 | As a Consumer I can view a list of trending posts so that I can select the one I’d prefer to read. | User opens the site at the home page. | The user can view a list of posts, based on their popularity. | Works as intended. |
-| <details><summary></summary><img src="docs/user-stories/user-story-1.png"></details> | | | |
+| <details><summary>Testing - User Story 1</summary><img src="docs/user-stories/user-story-1.png"></details> | | | |
 
 | **User Story 2** | **User Action** | **Desired Outcome** | **Actual Outcome** |
 |------------------|-----------------|---------------------|--------------------|
 | As a Consumer, I can view, and navigate through different Forum Boards and posts, so that I can find the topics/hobbies that I’d like to read. | User uses the UI to find the content they wish. | The user can use the top boards to a board they resonate with, they can then search through its posts. | Works as intended. |
-| <details><summary></summary><img src="docs/user-stories/user-story-2-1.png"></details> | | | |
-| <details><summary></summary><img src="docs/user-stories/user-story-2-2.png"></details> | | | |
+| <details><summary>Testing - User Story 2 (1)</summary><img src="docs/user-stories/user-story-2-1.png"></details> | | | |
+| <details><summary>Testing - User Story 2 (2)</summary><img src="docs/user-stories/user-story-2-2.png"></details> | | | |
 
 | **User Story 3** | **User Action** | **Desired Outcome** | **Actual Outcome** |
 |------------------|-----------------|---------------------|--------------------|
-| As a Consumer, I can view the number of likes a post has received, so that I can clearly see which post is the most popular. | User navigates to any post, through any way possible. | The user is clearly able to see how many likes a post has recieved. | Works as intended. |
-| <details><summary></summary><img src="docs/user-stories/user-story-3-1.png"></details> | | | |
-| <details><summary></summary><img src="docs/user-stories/user-story-3-2.png"></details> | | | |
+| As a Consumer, I can view the number of likes a post has received, so that I can clearly see which post is the most popular. | User navigates to any post, through any way possible. | The user is clearly able to see how many likes a post has received. | Works as intended. |
+| <details><summary>Testing - User Story 3 (1)</summary><img src="docs/user-stories/user-story-3-1.png"></details> | | | |
+| <details><summary>Testing - User Story 3 (2)</summary><img src="docs/user-stories/user-story-3-2.png"></details> | | | |
 
 | **User Story 4** | **User Action** | **Desired Outcome** | **Actual Outcome** |
 |------------------|-----------------|---------------------|--------------------|
-| As a Consumer, I can open a post so that I can read its contents. | The user clicks a post from any of the possible routes. | The post opens up fully and allows the user to read its full contents. | Works as intended. |
-| <details><summary></summary><img src="docs/user-stories/user-story-4.png"></details> | | | |
+| As a Consumer, I can open a post so that I can read its contents. | The user clicks a post from any of the possible routes. | The post opens fully and allows the user to read its full contents. | Works as intended. |
+| <details><summary>Testing - User Story 4</summary><img src="docs/user-stories/user-story-4.png"></details> | | | |
 
 | **User Story 5** | **User Action** | **Desired Outcome** | **Actual Outcome** |
 |------------------|-----------------|---------------------|--------------------|
-| As a Consumer, I can see the comments on a post, so that I can gather other’s opinions on the topic. | The user naviagtes to a post, and scrolls to the bottom of the page to view the 'Comments' section. | The comments on the post are clearly visbible to the user. | Works as intended. |
-| <details><summary></summary><img src="docs/user-stories/user-story-6.png"></details> | | | |
+| As a Consumer, I can see the comments on a post, so that I can gather other’s opinions on the topic. | The user navigates to a post, and scrolls to the bottom of the page to view the 'Comments' section. | The comments on the post are clearly visible to the user. | Works as intended. |
+| <details><summary>Testing - User Story 5</summary><img src="docs/user-stories/user-story-6.png"></details> | | | |
 
 | **User Story 6** | **User Action** | **Desired Outcome** | **Actual Outcome** |
 |------------------|-----------------|---------------------|--------------------|
-| As a Consumer, I can create an account, so that I can use more features of the site. | User naviagtes to the 'Sign Up' section in the Nav Bar, and clicks the link. | Easily sign up with no hassle, Once signed up the user can use more featues of the site. | Works as intended. | 
-| <details><summary></summary><img src="docs/user-stories/user-story-6.png"></details> | | | |
+| As a Consumer, I can create an account, so that I can use more features of the site. | User navigates to the 'Sign Up' section in the Nav Bar, and clicks the link. | Easily sign up with no hassle, Once signed up the user can use more features of the site. | Works as intended. | 
+| <details><summary>Testing - User Story 6</summary><img src="docs/user-stories/user-story-6.png"></details> | | | |
 
 | **User Story 7** | **User Action** | **Desired Outcome** | **Actual Outcome** |
 |------------------|-----------------|---------------------|--------------------|
 | As a Consumer I can like existing posts, so that I can help to increase its popularity/trending status. | User to navigate to the post's page, and then click the heart icon. | The post will climb in ranking on the home page. | Works as intended. |
-| <details><summary></summary><img src="docs/user-stories/user-story-7.png"></details> | | | |
+| <details><summary>Testing - User Story 7</summary><img src="docs/user-stories/user-story-7.png"></details> | | | |
 
 | **User Story 8** | **User Action** | **Desired Outcome** | **Actual Outcome** |
 |------------------|-----------------|---------------------|--------------------|
 | As a Consumer, I can make changes to my existing posts, so that I can rectify any errors I may have made while creating the original post. | User who created the post, clicks 'Edit Post' under the post's description, and clicks the link. | The user is then able to make the necessary adjustments and edits to the post. | Works as intended. |
-| <details><summary></summary><img src="docs/user-stories/user-story-8-1.png"></details> | | | |
-| <details><summary></summary><img src="docs/user-stories/user-story-8-2.png"></details> | | | |
+| <details><summary>Testing - User Story 8 (1)</summary><img src="docs/user-stories/user-story-8-1.png"></details> | | | |
+| <details><summary>Testing - User Story 8 (2)</summary><img src="docs/user-stories/user-story-8-2.png"></details> | | | |
 
 | **User Story 9** | **User Action** | **Desired Outcome** | **Actual Outcome** |
 |------------------|-----------------|---------------------|--------------------|
-| As a Consumer, I can delete any of my existing posts, so that I can chose to take said post down for whatever reason. | Creator of the post navigates to the 'Delete Post' button underneath the description, and clicks the link. | The user is prompted with a message to ensure they want to delete, after confirming the post is deleted. | Works as intended. |
-| <details><summary></summary><img src="docs/user-stories/user-story-9-1.png"></details> | | | |
-| <details><summary></summary><img src="docs/user-stories/user-story-9-2.png"></details> | | | |
+| As a Consumer, I can delete any of my existing posts, so that I can chose to take said post down for whatever reason. | Creator of the post navigates to the 'Delete Post' button underneath the description and clicks the link. | The user is prompted with a message to ensure they want to delete, after confirming the post is deleted. | Works as intended. |
+| <details><summary>Testing - User Story 9 (1)</summary><img src="docs/user-stories/user-story-9-1.png"></details> | | | |
+| <details><summary>Testing - User Story 9 (2)</summary><img src="docs/user-stories/user-story-9-2.png"></details> | | | |
 
 | **User Story 10** | **User Action** | **Desired Outcome** | **Actual Outcome** |
 |-------------------|-----------------|---------------------|--------------------|
 | As a Consumer, I can create a Forum Board, so that I can create a sub-community for said topic/hobby. | Users navigate to the 'Add Board' button on the home page, and clicks the link. | Users are presented with a form to fill in to create a board. | Works as intended. |
-| <details><summary></summary><img src="docs/user-stories/user-story-10-1.png"></details> | | | |
-| <details><summary></summary><img src="docs/user-stories/user-story-10-2.png"></details> | | | |
+| <details><summary>Testing - User Story 10 (1)</summary><img src="docs/user-stories/user-story-10-1.png"></details> | | | |
+| <details><summary>Testing - User Story 10 (2)</summary><img src="docs/user-stories/user-story-10-2.png"></details> | | | |
 
 | **User Story 11** | **User Action** | **Desired Outcome** | **Actual Outcome** |
 |-------------------|-----------------|---------------------|--------------------|
 | As a Consumer, I can follow a Forum Board, so that I can help to increase its popularity/trending status. | User clicks the follow icon. | The forum board increases by a follower, also moving it up on the top boards section. | Works as intended. |
-| <details><summary></summary><img src="docs/user-stories/user-story-11-1.png"></details> | | | |
-| <details><summary></summary><img src="docs/user-stories/user-story-11-2.png"></details> | | | |
-| <details><summary></summary><img src="docs/user-stories/user-story-11-3.png"></details> | | | |
+| <details><summary>Testing - User Story 11 (1)</summary><img src="docs/user-stories/user-story-11-1.png"></details> | | | |
+| <details><summary>Testing - User Story 11 (2)</summary><img src="docs/user-stories/user-story-11-2.png"></details> | | | |
+| <details><summary>Testing - User Story 11 (3)</summary><img src="docs/user-stories/user-story-11-3.png"></details> | | | |
 
 | **User Story 12** | **User Action** | **Desired Outcome** | **Actual Outcome** |
 |-------------------|-----------------|---------------------|--------------------|
 | As a Consumer, I can create a post, so that I can engage and start a conversation with my chosen Forum Board. | From the board detail page, the user navigates to the 'Add Post' section, and clicks the link. | The user is presented with a form to fill asking them for content to fill in about the post. | Works as intended. |
-| <details><summary></summary><img src="docs/user-stories/user-story-12-1.png"></details> | | | |
-| <details><summary></summary><img src="docs/user-stories/user-story-12-2.png"></details> | | | |
+| <details><summary>Testing - User Story 12 (1)</summary><img src="docs/user-stories/user-story-12-1.png"></details> | | | |
+| <details><summary>Testing - User Story 12 (2)</summary><img src="docs/user-stories/user-story-12-2.png"></details> | | | |
 
 | **User Story 13** | **User Action** | **Desired Outcome** | **Actual Outcome** |
 |-------------------|-----------------|---------------------|--------------------|
 | As a Consumer, I can comment on existing posts, so that I can add my input to an existing post/conversation. | User navigates to any post, scrolling down just under the post's description, they are able to add a 'Comment'. | The comment is displayed, showing engagement from the user. | Works as intended. |
-| <details><summary></summary><img src="docs/user-stories/user-story-13-1.png"></details> | | | |
-| <details><summary></summary><img src="docs/user-stories/user-story-13-2.png"></details> | | | |
+| <details><summary>Testing - User Story 13 (1)</summary><img src="docs/user-stories/user-story-13-1.png"></details> | | | |
+| <details><summary>Testing - User Story 13 (2)</summary><img src="docs/user-stories/user-story-13-2.png"></details> | | | |
 
 | **User Story 14** | **User Action** | **Desired Outcome** | **Actual Outcome** |
 |-------------------|-----------------|---------------------|--------------------|
 | As a Consumer, I can report a post, so that I can help to keep the community a safe place. | Navigate to the post they wish to report, under this they can select 'Report Post'. | The user is presented with a form to fill where they can make a complaint about a post. | Works as intended. |
-| <details><summary></summary><img src="docs/user-stories/user-story-14-1.png"></details> | | | |
-| <details><summary></summary><img src="docs/user-stories/user-story-14-2.png"></details> | | | |
+| <details><summary>Testing - User Story 14 (1)</summary><img src="docs/user-stories/user-story-14-1.png"></details> | | | |
+| <details><summary>Testing - User Story 14 (2)</summary><img src="docs/user-stories/user-story-14-2.png"></details> | | | |
 
 | **User Story 15** | **User Action** | **Desired Outcome** | **Actual Outcome** |
 |-------------------|-----------------|---------------------|--------------------|
 | As a Consumer, I can get in touch with the administrative team, so that I can make suggestions or submit bugs. | User navigates to the nav bar and clicks 'Contact Us' link. | User is brought to a form to which they can fill out to get in touch with the owner/admin. | Works as intended. |
-| <details><summary></summary><img src="docs/user-stories/user-story-15-1.png"></details> | | | |
-| <details><summary></summary><img src="docs/user-stories/user-story-15-2.png"></details> | | | |
+| <details><summary>Testing - User Story 15 (1)</summary><img src="docs/user-stories/user-story-15-1.png"></details> | | | |
+| <details><summary>Testing - User Story 15 (2)</summary><img src="docs/user-stories/user-story-15-2.png"></details> | | | |
 
 | **User Story 16** | **User Action** | **Desired Outcome** | **Actual Outcome** |
 |-------------------|-----------------|---------------------|--------------------|
 | As an Admin/Owner, I can create, read, edit, like, and delete existing boards, posts, and comments, so that I can manage the content posted on the site. | The administrator navigates to the 'admin' panel. | The admin is able to used the console to make changes, add or delete content as needed. | Works as intended. |
-| <details><summary></summary><img src="docs/user-stories/user-story-16-1.png"></details> | | | |
-| <details><summary></summary><img src="docs/user-stories/user-story-16-2.png"></details> | | | |
-| <details><summary></summary><img src="docs/user-stories/user-story-16-3.png"></details> | | | |
+| <details><summary>Testing - User Story 16 (1)</summary><img src="docs/user-stories/user-story-16-1.png"></details> | | | |
+| <details><summary>Testing - User Story 16 (2)</summary><img src="docs/user-stories/user-story-16-2.png"></details> | | | |
+| <details><summary>Testing - User Story 16 (3)</summary><img src="docs/user-stories/user-story-16-3.png"></details> | | | |
 
 | **User Story 17** | **User Action** | **Desired Outcome** | **Actual Outcome** |
 |-------------------|-----------------|---------------------|--------------------|
 | As an Owner, I can provide a fully responsive experience, so that my users can visit the website on any device they wish. | The user navigates to the site, on any page. | The site remains visible and usable regardless of where it is being viewed. | Works as intended. |
-| <details><summary></summary><img src="docs/user-stories/user-story-17-1.png"></details> | | | |
-| <details><summary></summary><img src="docs/user-stories/user-story-17-2.png"></details> | | | |
+| <details><summary>Testing - User Story 17 (1)</summary><img src="docs/user-stories/user-story-17-1.png"></details> | | | |
+| <details><summary>Testing - User Story 17 (2)</summary><img src="docs/user-stories/user-story-17-2.png"></details> | | | |
 
 | **User Story 18** | **User Action** | **Desired Outcome** | **Actual Outcome** |
 |-------------------|-----------------|---------------------|--------------------|
 | As an Owner, I can to provide my users with feedback, so that they can distinguish if their action was successful. | User creates some content, uses user authentication, or makes an error. | The user is prompted with a message to inform them of their action. | Works as intended. |
-| <details><summary></summary><img src="docs/user-stories/user-story-18-1.png"></details> | | | |
-| <details><summary></summary><img src="docs/user-stories/user-story-18-2.png"></details> | | | |
-| <details><summary></summary><img src="docs/user-stories/user-story-18-3.png"></details> | | | |
+| <details><summary>Testing - User Story 18 (1)</summary><img src="docs/user-stories/user-story-18-1.png"></details> | | | |
+| <details><summary>Testing - User Story 18 (2)</summary><img src="docs/user-stories/user-story-18-2.png"></details> | | | |
+| <details><summary>Testing - User Story 18 (3)</summary><img src="docs/user-stories/user-story-18-3.png"></details> | | | |
 
 | **User Story 19** | **User Action** | **Desired Outcome** | **Actual Outcome** |
 |-------------------|-----------------|---------------------|--------------------|
 | As and Owner, I can ensure only users with accounts to be able to create content, so that some form of moderation can be used if needed. | User navigates to any form of content creation page. | If the user is signed in they can continue, if they are not they are unable to do so and are prompted to sign in or sign up. | Works as intended. |
-| <details><summary></summary><img src="docs/user-stories/user-story-19-1.png"></details> | | | |
-| <details><summary></summary><img src="docs/user-stories/user-story-19-2.png"></details> | | | |
-| <details><summary></summary><img src="docs/user-stories/user-story-19-3.png"></details> | | | |
+| <details><summary>Testing - User Story 19 (1)</summary><img src="docs/user-stories/user-story-19-1.png"></details> | | | |
+| <details><summary>Testing - User Story 19 (2)</summary><img src="docs/user-stories/user-story-19-2.png"></details> | | | |
+| <details><summary>Testing - User Story 19 (3)</summary><img src="docs/user-stories/user-story-19-3.png"></details> | | | |
 
 ## Bugs and Errors
 | **Bug/Error** | **Resolution** |
 |---------------|----------------|
-| News Catcher API - Intially I wanted to use the News Catcher API to implement the top stories, however as I could not get an increased request rate this resulted in errors as the items could not be displayed after about 5 requests. | To resolve this issue I decided to move to NewsAPI.org which offered a much higher request rate per day for projects in developent |
-| HTML Code Initially wasn't validated due to mainly indenting errors and ending divs missing, there were also so images without an alt tag | Made the necessary adjustments by looking at the live source code and making the changes needed to ensure the document was validated. |
-| In my initial testing of edit_post I was unable to figure out how to edit an existing post and have this detail shown to the user | After some reasearch I figured out you must inlude 'instance' in the request in order to populate the fields |
+| News Catcher API - Initially I wanted to use the News Catcher API to implement the top stories, however as I could not get an increased request rate this resulted in errors as the items could not be displayed after about 5 requests. | To resolve this issue I decided to move to NewsAPI.org which offered a much higher request rate per day for projects in development. |
+| HTML Code Initially wasn't validated due to mainly indenting errors and ending div tags being missed, there were also so images without an alt tag | Made the necessary adjustments by looking at the live source code and making the changes needed to ensure the document was validated. |
+| In my initial testing of edit_post I was unable to figure out how to edit an existing post and have this detail shown to the user | After some research I figured out you must include 'instance' in the request in order to populate the fields |
 
 ## Deployment
 
@@ -783,9 +784,9 @@ The project was tested and viewed on the following browsers with no errors:
 The following steps are used to locally deploy this project for development:
 
 1. Navigate to the Repository [CI_PP4_TheForum](https://github.com/DanPearce/CI_PP4_TheForum)
-2. Click the 'Code' button, and copy the url given to clone the repository.
-3. Use the terminal in your chosen editor and enter 'git clone' followed by the url, the Workspace is then created, this will clone the repository to your local editor.
-4. Create an env.py file, this is to be relevent to your local keys and are to be kept private. Please ensure that this is added to the .gitignore file before pushing online.
+2. Click the 'Code' button, and copy the URL given to clone the repository.
+3. Use the terminal in your chosen editor and enter 'git clone' followed by the URL, the Workspace is then created, this will clone the repository to your local editor.
+4. Create an env.py file, this is to be relevant to your local keys and are to be kept private. Please ensure that this is added to the .gitignore file before pushing online.
 5. The keys created are then to be used throughout the project either in the settings file or for use with the News API.
 
 6. 
@@ -824,7 +825,7 @@ The following steps are used to locally deploy this project for development:
 11. The project has now been deployed locally. 
 
 #### Creation of the Project
-In order to create the project the following steps were performed:
+In order to create the project, the following steps were performed:
 
 | Terminal Action | Command |
 |-----------------|---------|
@@ -834,7 +835,7 @@ In order to create the project the following steps were performed:
 | Project Creation | 'django-admin startproject theforum' |
 | App Creation | 'python3 manage.py startapp forumboard' |
 
-3. Under the project's folder, settings.py is now avaliable, under 'INSTALLED_APPS' added the new apps name 'forumboard'
+3. Under the project's folder, settings.py is now available, under 'INSTALLED_APPS' added the new apps name 'forumboard'
 
 4. After creation of the models.py document - in the terminal, the following commands were then used:
 <br><code>'python3 manage.py makemigrations' prepares the document for migration</code>
@@ -844,7 +845,7 @@ The last few steps are repeated with each addition to the apps used in the proje
 
 ### Deployment to Heroku Use of Elephant SQL
 The following steps were actioned to host the site on Heroku with a live database:
-1. Create an [ElepahntSQL](https://www.elephantsql.com) Account, and select the Tiny Turtle option in order to use a free account.
+1. Create an [ElepahntSQL](https://www.elephantsql.com) account and select the Tiny Turtle option in order to use a free account.
 2. Create a new instance, and name this as you wish - I chose the project name.
 3. Under the details, make note of the URL and keep this to one side. 
 
@@ -861,7 +862,7 @@ The following steps were actioned to host the site on Heroku with a live databas
     'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
 }</code>
 
-9. Ensure the value DEBUG is set to false, this is to prevent static files being hosted locally, also to prevent accidential secret information being readily avaliable to the public.
+9. Ensure the value DEBUG is set to false, this is to prevent static files being hosted locally, also to prevent accidental secret information being readily available to the public.
 10. Navigating back to Heroku, find the open app button to find the link for you application - add this to the allowed hosts of value in the settings.py file.
 ![Heroku App](docs/deployment/heroku-open-app.png)
 <br><code>ALLOWED_HOSTS = ['ci-pp4-theforum-danpearce.herokuapp.com', 'localhost']</code>
@@ -872,7 +873,7 @@ The following steps were actioned to host the site on Heroku with a live databas
 12. Navigate to the settings of the Heroku app, ensure all Config Vars are filled with any keys that have been stored locally in env.py
 ![Heroku Config](docs/deployment/heroku-config-vars.png)
 
-13. Link the Repository to the Application, this is succesfully done by linking our GitHub deployment menthod to Heroku and connecting to our repository by searching once logged in.
+13. Link the Repository to the Application, this is successfully done by linking our GitHub deployment method to Heroku and connecting to our repository by searching once logged in.
 ![Heroku Deployment](docs/deployment/heroku-github.png)
 
 14. Once connected, deployment can be made either through automatic deploys or manually - have chosen manually to ensure that version control can be measured. 
@@ -901,3 +902,5 @@ As always there are some people I would especially like to thank for their conti
 - Thank you to my mentor, Mo Shami, as he continues to provide me valuable information!
 - Thank you to my partner, Harry for allowing me to have the time to continue my efforts.
 - Thank you to you, for taking the time to look at my work!
+
+#### [Back to Top](#contents)
