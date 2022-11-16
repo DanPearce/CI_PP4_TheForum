@@ -778,6 +778,107 @@ The project was tested and viewed on the following browsers with no errors:
 
 ## Deployment
 
+### Local Deployment
+The following steps are used to locally deploy this project for development:
+
+1. Navigate to the Repository [CI_PP4_TheForum](https://github.com/DanPearce/CI_PP4_TheForum)
+2. Click the 'Code' button, and copy the url given to clone the repository.
+3. Use the terminal in your chosen editor and enter 'git clone' followed by the url, the Workspace is then created, this will clone the repository to your local editor.
+4. Create an env.py file, this is to be relevent to your local keys and are to be kept private. Please ensure that this is added to the .gitignore file before pushing online.
+5. The keys created are then to be used throughout the project either in the settings file or for use with the News API.
+
+6. 
+- Database:
+<br><code>os.environ['DATABASE_URL'] = 'POPULATE_YOUR_KEY_HERE' </code>
+
+- Django SECRET_KEY:
+<br><code>os.environ['SECRET_KEY'] = 'POPULATE_YOUR_KEY_HERE' </code>
+
+- Cloudinary:
+<br><code>os.environ['CLOUDINARY_URL'] = 'POPULATE_YOUR_KEY_HERE' </code>
+
+- API Key:
+<br><code>os.environ['API_KEY'] = 'POPULATE_YOUR_KEY_HERE' </code>
+
+- Email Keys and Emails
+<br><code>os.environ['EMAIL_HOST'] = 'POPULATE_YOUR_KEY_HERE' </code>
+<br><code>os.environ['EMAIL_HOST_USER'] = 'POPULATE_YOUR_KEY_HERE' </code>
+<br><code>os.environ['EMAIL_HOST_PASSWORD'] = 'POPULATE_YOUR_KEY_HERE' </code>
+<br><code>os.environ['EMAIL_PORT'] = 'POPULATE_YOUR_KEY_HERE' </code>
+<br><code>os.environ['EMAIL_FROM'] = 'POPULATE_YOUR_KEY_HERE' </code>
+<br><code>os.environ['EMAIL_TO'] = 'POPULATE_YOUR_KEY_HERE' </code>
+
+7. Install any other applications that are listed in the 'requirements.txt' file.
+
+8. Connect the database(s) to the settings.py file under DATABASES, set the project DEBUG value to True and the ALLOWED_HOSTS value to 'localhost/127.0.0.1' to allow the project to be ran locally.
+
+9. 
+<br><code>'python3 manage.py makemigrations' prepares the document for migration</code>
+<br><code>'python3 manage.py migrate' migrations are made to the database.</code>
+<br><code>'python3 manage.py createsuper user' you are prompted to create a super use for the project.</code>
+<br><code>'python3 manage.py runserver locally runs the server on your device.</code>
+
+10. Open the project by navigating to https://127.0.0.1:8000/ in your web browser!
+
+11. The project has now been deployed locally. 
+
+#### Creation of the Project
+In order to create the project the following steps were performed:
+
+| Terminal Action | Command |
+|-----------------|---------|
+| Install Django and Gunicorn | 'pip3 install django gunicorn' |
+| Install Django Database Dictionary | 'pip3 install django dj_database_url psycode2' |
+| Set up 'requirements.txt' | 'pip3 freeze --local > requirements.txt' |
+| Project Creation | 'django-admin startproject theforum' |
+| App Creation | 'python3 manage.py startapp forumboard' |
+
+3. Under the project's folder, settings.py is now avaliable, under 'INSTALLED_APPS' added the new apps name 'forumboard'
+
+4. After creation of the models.py document - in the terminal, the following commands were then used:
+<br><code>'python3 manage.py makemigrations' prepares the document for migration</code>
+<br><code>'python3 manage.py migrate' migrations are made to the database.</code>
+
+The last few steps are repeated with each addition to the apps used in the project.
+
+### Deployment to Heroku Use of Elephant SQL
+The following steps were actioned to host the site on Heroku with a live database:
+1. Create an [ElepahntSQL](https://www.elephantsql.com) Account, and select the Tiny Turtle option in order to use a free account.
+2. Create a new instance, and name this as you wish - I chose the project name.
+3. Under the details, make note of the URL and keep this to one side. 
+
+![Elephant SQL](docs/deployment/elephantsql-deployment.png)
+
+4. Sign in to your[Heroku](https://heroku.com/) Account or Create One
+5. Create an app and select the region nearest to you.
+6. Ensure that the requirments.txt file within the project is up to date.
+<br><code>'pip3 freeze --local > requirements.txt'</code>
+
+7. In the project also create a 'Procfile' and add the text web: gunicorn project_name.wsgi (Replace project name with your project name, in my case 'theforum')
+8. In the settings.py add the newly created Elephant SQL database to the DATABASE value - ensure to use env.py to keep this secret.
+<br><code>DATABASES = {
+    'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+}</code>
+
+9. Ensure the value DEBUG is set to false, this is to prevent static files being hosted locally, also to prevent accidential secret information being readily avaliable to the public.
+10. Navigating back to Heroku, find the open app button to find the link for you application - add this to the allowed hosts of value in the settings.py file.
+![Heroku App](docs/deployment/heroku-open-app.png)
+<br><code>ALLOWED_HOSTS = ['ci-pp4-theforum-danpearce.herokuapp.com', 'localhost']</code>
+
+11. Ensure all code is pushed to the GitHub Repository.
+<br><code>git push origin main</code>
+
+12. Navigate to the settings of the Heroku app, ensure all Config Vars are filled with any keys that have been stored locally in env.py
+![Heroku Config](docs/deployment/heroku-config-vars.png)
+
+13. Link the Repository to the Application, this is succesfully done by linking our GitHub deployment menthod to Heroku and connecting to our repository by searching once logged in.
+![Heroku Deployment](docs/deployment/heroku-github.png)
+
+14. Once connected, deployment can be made either through automatic deploys or manually - have chosen manually to ensure that version control can be measured. 
+![Heroku Deploy](docs/deployment/heroku-deploy.png)
+
+15. Once completed, the live application can be accessed via the link below the deploy section, any errors can be found under the deploy tab to trouble shoot any errors that may occur.
+
 ## Credits
 
 ## Acknowledgements
