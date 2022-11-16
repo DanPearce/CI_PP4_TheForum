@@ -455,6 +455,7 @@ I used [NewsAPI](https://newsapi.org/) within this project, which allows develop
 - [Am I Responsive? - ui.dev](https://ui.dev/amiresponsive) - Used to create the responsive images for the site.
 - [Cloudinary](https://cloudinary.com/) - Used to host the images used on the live site.
 - [Summernote](https://summernote.org/) - Used to enhance some text fields on the site.
+- [Mailtrap](https://www.mailtrap.io/) - Used to send the data from the contact us form to the site owner.
 - Validation:
     - [WC3 Markup Validation Serivce](https://validator.w3.org/) - Used to validate the HTML.
     - [W3C Jigsaw Validation Service](https://jigsaw.w3.org/css-validator/) - Used to validate the CSS.
@@ -881,4 +882,22 @@ The following steps were actioned to host the site on Heroku with a live databas
 
 ## Credits
 
+### Code 
+- [HTML and CSS](https://www.htmlandcssbook.com/) by Jon Duckett - Used to broaden my knowledge in HTML and CSS
+- [Bootstrap Footer](https://radu.link/make-footer-stay-bottom-page-bootstrap/) - Used to solve my issues getting the footer at the bottom of a bootstrap project.
+- [Django Order By Count](https://stackoverflow.com/questions/23033769/django-order-by-count) - Used to help me figure out how to order my posts/boards by popularity.
+- [Django Pagination](https://www.youtube.com/watch?v=wmYSKVWOOTM) by [Pretty Printed](https://www.youtube.com/@prettyprinted) - Used to broaden my knowledge in Django pagination.
+- [Django Messages](https://www.youtube.com/watch?v=SISkqfrL0ME) by [B Learning Club](https://www.youtube.com/@blearningclub) - Used to broaden my knowledge with Django messages.
+- [Django Email Contact Form](https://www.youtube.com/watch?v=dnhEnF7_RyM) by [Code with Stein](https://www.youtube.com/c/CodeWithStein) - Used to help me create a form that sends an email to the [Mailtrap](https://www.mailtrap.io/) service.
+- [NewsAPI.org](https://newsapi.org/) - Provides the top stories featured on the site, all individual stories credits go to their respectful owners.
+
+### Images
+- [theforum | Post](https://www.stockvault.net/photo/181334/linked-in-a-network-social-network-and-social-connections-concept) by [Jack Moreh](https://www.stockvault.net/user/profile/139626)
+- [games | Header](https://unsplash.com/photos/WcrqKjgMPfI) by [Axville](https://unsplash.com/@axville)
+- [cats | Header](https://unsplash.com/photos/46TvM-BVrRI) by [Daria Shatova](https://unsplash.com/@dariasha911)
+
 ## Acknowledgements
+As always there are some people I would especially like to thank for their continued support throughout my coding journey.
+- Thank you to my mentor, Mo Shami, as he continues to provide me valuable information!
+- Thank you to my partner, Harry for allowing me to have the time to continue my efforts.
+- Thank you to you, for taking the time to look at my work!
