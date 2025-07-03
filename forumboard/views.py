@@ -32,7 +32,7 @@ def get_index(request):
     Load the boards on the website.
     """
     api_key = os.environ.get('API_KEY')
-    url = f'https://newsapi.org/v2/top-headlines?country=gb&apiKey={api_key}'
+    url = f'https://newsapi.org/v2/top-headlines?country=us&apiKey={api_key}'
     response = requests.get(url)
     data = response.json()
     articles = data['articles']
