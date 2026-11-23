@@ -48,8 +48,9 @@ def contact(request):
                            ' message, please try again!')
     else:
         contact_form = ContactForm()
-        context = {
-            'contact_form': contact_form
-        }
+
+    context = {
+        'contact_form': contact_form
+    }
 
     return render(request, 'contact.html', context)

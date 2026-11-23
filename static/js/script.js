@@ -1,4 +1,6 @@
 // Logo Animation
-$(".logo").mouseout(function() {
-    $(this).addClass("logoHoverRemoved");
- });
+document.querySelectorAll(".logo").forEach(function (logo) {
+    logo.addEventListener("mouseout", function () {
+        logo.classList.add("logoHoverRemoved");
+    });
+});
