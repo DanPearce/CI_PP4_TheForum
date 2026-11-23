@@ -1,5 +1,5 @@
 # theforum - No ads. No Fuss. Just Forums.
-Developed by, [Dan Pearce](https://danpearce.software/)
+Developed by, [Dan Pearce](https://danielpearce.co.uk/)
 
 [View the live application](https://theforum.danielpearce.co.uk/)
 
@@ -466,6 +466,15 @@ I used [NewsAPI](https://newsapi.org/) within this project, which allows develop
 #### [Back to Top](#contents)
 
 ## Validation and Testing
+
+### Automated tests (November 2026)
+The project has automated tests for the public pages, sign-in requirements, likes, follows, comments, who may edit or
+delete a post, and the contact form. They run against a local SQLite database, no other setup needed:
+
+```
+pip install -r requirements.txt
+SECRET_KEY=test python manage.py test
+```
 
 ### PyCodeStyle Validation
 All Python Code has been checked using the [PyCodeStyle](https://pypi.org/project/pycodestyle/) library. All code has been returned with no errors.
