@@ -1,7 +1,7 @@
 # theforum - No ads. No Fuss. Just Forums.
-Developed by, [Dan Pearce](https://danpearce.software/)
+Developed by, [Dan Pearce](https://danielpearce.co.uk/)
 
-[View the live application](https://ci-pp4-theforum-danpearce.herokuapp.com/)
+[View the live application](https://theforum.danielpearce.co.uk/)
 
 ![Screen Capture](docs/theforum/home-responsive.png)
 
@@ -467,6 +467,15 @@ I used [NewsAPI](https://newsapi.org/) within this project, which allows develop
 
 ## Validation and Testing
 
+### Automated tests (November 2026)
+The project has automated tests for the public pages, sign-in requirements, likes, follows, comments, who may edit or
+delete a post, and the contact form. They run against a local SQLite database, no other setup needed:
+
+```
+pip install -r requirements.txt
+SECRET_KEY=test python manage.py test
+```
+
 ### PyCodeStyle Validation
 All Python Code has been checked using the [PyCodeStyle](https://pypi.org/project/pycodestyle/) library. All code has been returned with no errors.
 
@@ -779,6 +788,8 @@ The project was tested and viewed on the following browsers with no errors:
 | In my initial testing of edit_post I was unable to figure out how to edit an existing post and have this detail shown to the user | After some research I figured out you must include 'instance' in the request in order to populate the fields |
 
 ## Deployment
+
+> **Hosting update (November 2026):** the live site no longer runs on Heroku. It is now self-hosted on my own server (Docker containers behind Caddy, with PostgreSQL where needed). The Heroku steps below describe the original deployment and are kept as a record.
 
 ### Local Deployment
 The following steps are used to locally deploy this project for development:

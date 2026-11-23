@@ -33,9 +33,12 @@ def get_index(request):
     """
     api_key = os.environ.get('API_KEY')
     url = f'https://newsapi.org/v2/top-headlines?country=us&apiKey={api_key}'
-    response = requests.get(url)
-    data = response.json()
-    articles = data['articles']
+    try:
+        response = requests.get(url, timeout=5)
+        articles = response.json().get('articles', [])
+    except (requests.RequestException, ValueError):
+        # NewsAPI is down, over its limit or the key is wrong: show the page without headlines
+        articles = []
     latest_posts = ForumPost.objects.annotate(count=Count('likes')).order_by(
                    '-count')
     post_paginator = Paginator(latest_posts, 5)
@@ -53,6 +56,7 @@ def get_index(request):
     return render(request, 'index.html', context)
 
 
+@method_decorator(login_required, name='post')
 class PostDetail(View):
     """
     View to generate items related to posts
@@ -141,6 +145,7 @@ class BoardDetail(View):
         return render(request, 'board_detail.html', context)
 
 
+@login_required
 def add_post(request, name, *args, **kwargs):
     """
     Render the add post html
@@ -187,6 +192,7 @@ def get_all_boards(request):
     return render(request, 'all_boards.html', context)
 
 
+@login_required
 def add_board(request, *args, **kwargs):
     """
     Render the add post html
@@ -213,6 +219,7 @@ def add_board(request, *args, **kwargs):
     return render(request, 'add_board.html', context)
 
 
+@method_decorator(login_required, name='post')
 class PostLike(View):
     """
     Render the view to allow us to post a like/remove a like
@@ -230,6 +237,7 @@ class PostLike(View):
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
 
+@method_decorator(login_required, name='post')
 class BoardFollow(View):
     """
     Render the view to allow us to post a like/remove a follow
