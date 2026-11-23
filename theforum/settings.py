@@ -39,7 +39,7 @@ DEBUG = False
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 # Allowed Hosts
-ALLOWED_HOSTS = ['ci-pp4-theforum-danpearce.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['theforum.danielpearce.co.uk', 'localhost']
 
 # Email Hosts (Used for contact app)
 EMAIL_HOST = os.environ.get('EMAIL_HOST')

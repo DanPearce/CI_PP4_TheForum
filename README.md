@@ -1,7 +1,7 @@
 # theforum - No ads. No Fuss. Just Forums.
 Developed by, [Dan Pearce](https://danpearce.software/)
 
-[View the live application](https://ci-pp4-theforum-danpearce.herokuapp.com/)
+[View the live application](https://theforum.danielpearce.co.uk/)
 
 ![Screen Capture](docs/theforum/home-responsive.png)
 
@@ -779,6 +779,8 @@ The project was tested and viewed on the following browsers with no errors:
 | In my initial testing of edit_post I was unable to figure out how to edit an existing post and have this detail shown to the user | After some research I figured out you must include 'instance' in the request in order to populate the fields |
 
 ## Deployment
+
+> **Hosting update (November 2026):** the live site no longer runs on Heroku. It is now self-hosted on my own server (Docker containers behind Caddy, with PostgreSQL where needed). The Heroku steps below describe the original deployment and are kept as a record.
 
 ### Local Deployment
 The following steps are used to locally deploy this project for development:
